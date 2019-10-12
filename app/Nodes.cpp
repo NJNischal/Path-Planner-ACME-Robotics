@@ -1,18 +1,21 @@
 /*
  * @copyright 2019
  * @copyright MIT License
- * @file main.cpp
+ * @file Nodes.cpp
  * Design (Phase 1)
- * @author Nischal Nj - Driver
+ * @author Nischal NJ - Driver
  * @author Vamshi - Navigator
  * @author Raja - Design keeper
  * @version 1.0
  * @date 11/10/2019
- * @brief This is the main file for this project.
+ * @brief Implementation of Nodes class.
  */
 
-#include <iostream>
+#include <Nodes.h>
 
-int main() {
-  return 0;
+Nodes::Nodes() {
 }
+
+Nodes::~Nodes() {
+}
+
