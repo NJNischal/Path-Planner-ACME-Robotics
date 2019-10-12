@@ -18,4 +18,3 @@ Nodes::Nodes() {
 
 Nodes::~Nodes() {
 }
-

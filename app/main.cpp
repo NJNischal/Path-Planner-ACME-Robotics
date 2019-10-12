@@ -3,9 +3,9 @@
  * @copyright MIT License
  * @file main.cpp
  * Design (Phase 1)
- * @author Nischal Nj - Driver
- * @author Vamshi - Navigator
- * @author Raja - Design keeper
+ * @author Nischal NJ - Design Keeper
+ * @author Vamshi - Driver
+ * @author Raja - Navigator
  * @version 1.0
  * @date 11/10/2019
  * @brief This is the main file for this project.
