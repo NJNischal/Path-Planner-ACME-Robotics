@@ -14,7 +14,7 @@
 
 #ifndef INCLUDE_ACTIONS_H_
 #define INCLUDE_ACTIONS_H_
-#include "Nodes.h"
+#include "NodesManager.h"
 
 
 class Actions {

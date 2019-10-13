@@ -5,7 +5,7 @@ add_executable(
     main.cpp
     test.cpp
     ../app/Map.cpp
-    ../app/Nodes.cpp
+    ../app/NodesManager.cpp
     ../app/Actions.cpp
 )
 

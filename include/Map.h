@@ -13,7 +13,7 @@
 
 #include <eigen3/Eigen/Dense>
 #include <iostream>
-#include "Nodes.h"
+#include "NodesManager.h"
 
 #ifndef INCLUDE_MAP_H_
 #define INCLUDE_MAP_H_
