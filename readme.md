@@ -25,4 +25,10 @@ Run program: ./app/shell-app
 ```
 
 
+##Shareable Links:
 
+Sprint notes: 
+https://docs.google.com/document/d/12OItDMsqb8h6DQTVezA4NGi-M5xf9JzFdQqQbvPX68Q/edit?ts=5d9f4c66
+
+AIP Template:
+https://docs.google.com/spreadsheets/d/1fC9TYi5srTVPyc5ghDMLPsvgVkAj7jlxIm-aA8zec2o/edit?ts=5d9f4b72#gid=0
