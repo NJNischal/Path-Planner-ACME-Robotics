@@ -17,6 +17,7 @@
 #include "Map.h"
 #include "NodesManager.h"
 #include "Actions.h"
+#include "Astar.h"
 
 /**
  * @brief This is a test for methods in Map class
@@ -89,3 +90,40 @@ TEST(nodesTest, testNodesManagerMethods) {
   EXPECT_EQ(1, node.getVisitedStatus(currentPos));
 }
 
+/**
+ * @brief This is a test for methods in Astar class
+ */
+TEST(astarTest, testAstarMethods) {
+  Astar astar;
+
+
+  Eigen::Vector2d a1(1, 1);
+  Eigen::Vector2d b1(1, 2);
+  Eigen::Vector2d c1(1, 3);
+  Eigen::Vector2d d1(1, 4);
+  std::vector<Eigen::Vector2d> p { a1, b1, c1, d1 };
+
+  astar.setStartPosition(1, 1);
+  EXPECT_EQ(1, astar.getStartPosition().x);
+  EXPECT_EQ(1, astar.getStartPosition().y);
+
+  astar.setGoalPosition(1, 4);
+  EXPECT_EQ(1, astar.getGoalPosition().x);
+  EXPECT_EQ(4, astar.getGoalPosition().y);
+
+  Position startPos;
+  startPos.x = 1;
+  startPos.y = 1;
+
+  Position currentPos;
+  currentPos.x = 1;
+  currentPos.y = 3;
+
+  Position goalPos;
+  goalPos.x = 1;
+  goalPos.y = 4;
+
+  EXPECT_EQ(p, astar.aStarAlgorithm());
+  EXPECT_EQ(2, astar.computeCostToCome(startPos,currentPos));
+  EXPECT_EQ(1, astar.computeCostToGo(goalPos,currentPos));
+}

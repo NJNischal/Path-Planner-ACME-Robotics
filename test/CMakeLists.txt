@@ -7,6 +7,7 @@ add_executable(
     ../app/Map.cpp
     ../app/NodesManager.cpp
     ../app/Actions.cpp
+    ../app/Astar.cpp
 )
 
 target_include_directories(cpp-test PUBLIC ../vendor/googletest/googletest/include 

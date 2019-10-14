@@ -16,7 +16,9 @@
 #define INCLUDE_ACTIONS_H_
 #include "NodesManager.h"
 
-
+/**
+ * @brief Actions class is used to generate movement for the robot in the action space which is in 8 directions.
+ */
 class Actions {
  public:
   Actions();
