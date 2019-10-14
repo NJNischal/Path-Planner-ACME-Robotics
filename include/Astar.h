@@ -13,6 +13,7 @@
 
 #include "NodesManager.h"
 #include <eigen3/Eigen/Dense>
+#include <vector>
 
 #ifndef INCLUDE_ASTAR_H_
 #define INCLUDE_ASTAR_H_
@@ -29,7 +30,7 @@ class Astar {
   /**
    * @brief In this method, the shortest path will be computed using the A* algorithm
    * @param None
-   * @return None
+   * @return std::vector<Eigen::Vector2d> returns path obtained from astar algorithm.
    */
   std::vector<Eigen::Vector2d> aStarAlgorithm();
 

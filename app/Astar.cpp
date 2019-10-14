@@ -11,8 +11,7 @@
  * @brief cpp implementation file for Astar class which is used to compute the shortest path between two points avoiding obstacles.
  */
 
-#include <Astar.h>
-#include <vector>
+#include "Astar.h"
 
 Astar::Astar() {
 }
