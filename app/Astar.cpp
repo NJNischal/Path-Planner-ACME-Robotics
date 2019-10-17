@@ -62,5 +62,4 @@ void Astar::setStartPosition(int x, int y) {
 void Astar::setGoalPosition(int x, int y) {
   (void) x;
   (void) y;
-
 }
