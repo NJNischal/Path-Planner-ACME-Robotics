@@ -48,9 +48,11 @@ class NodesManager {
    * Parent for (1,1) is represented by (x-coordinate*100 + y-coordinate)
    * i.e. (1,2) - id is 102
    * @param Position struct which has x,y value, coordinates of a given location.
+   * @param int parentId which represents unique id for the parent this
+   * id is stored in the parentMatrix.
    * @return None
    */
-  void updateParent(const Position& pos);
+  void updateParent(const Position& pos, int parentId);
 
   /**
    * @brief Takes the current node as index for the Cost matrix and updates the cost at that index

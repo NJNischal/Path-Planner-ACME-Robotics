@@ -23,8 +23,9 @@ void NodesManager::updateVisited(const Position& pos) {
   (void) pos;
 }
 
-void NodesManager::updateParent(const Position& pos) {
+void NodesManager::updateParent(const Position& pos, int parentId) {
   (void) pos;
+  (void) parentId;
 }
 
 void NodesManager::updateCost(const Position& pos, double cost) {

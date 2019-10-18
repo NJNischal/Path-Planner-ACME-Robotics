@@ -45,18 +45,9 @@ class Astar {
    * @brief Calculates the cost to go for the current position and goal position
    * (Euclidean Distance between the two points)
    * @param current position, stuct Position
-   * @param goal position, stuct Position
    * @return Double Cost to go
    */
-  double computeCostToGo(const Position& pos, const Position& posi);
-
-  /**
-   * @brief Calculates the cost to come for the current position and start position (Euclidean distance heuristic)
-   * @param current position, stuct Position
-   * @param start position, stuct Position
-   * @return Double Cost to come
-   */
-  double computeCostToCome(const Position& pos, const Position& posi);
+  double computeCostToGo(const Position& pos);
 
   /**
    * @brief Is used to retrieve the start position
@@ -85,7 +76,6 @@ class Astar {
    * @return None
    */
   void setGoalPosition(int x, int y);
-
 
  private:
   Position startPosition;

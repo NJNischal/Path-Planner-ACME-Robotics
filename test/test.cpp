@@ -80,14 +80,14 @@ TEST(nodesTest, testNodesManagerMethods) {
   node.updateCostToCome(newPos, sqrt(2));
   node.updateCostToGo(newPos, sqrt(17));
 
-  EXPECT_EQ(2, node.getCost(newPos));
-  EXPECT_EQ(1, node.getCostToCome(newPos));
-  EXPECT_EQ(1, node.getCostToGo(newPos));
+  EXPECT_EQ(sqrt(2) + sqrt(17), node.getCost(newPos));
+  EXPECT_EQ(sqrt(2), node.getCostToCome(newPos));
+  EXPECT_EQ(sqrt(17), node.getCostToGo(newPos));
 
-  node.updateParent(newPos);
+  node.updateParent(newPos, 00);
   node.updateVisited(newPos);
   EXPECT_EQ(00, node.getParent(newPos));
-  EXPECT_EQ(1, node.getVisitedStatus(currentPos));
+  EXPECT_EQ(1, node.getVisitedStatus(newPos));
 }
 
 /**
@@ -133,6 +133,5 @@ TEST(astarTest, testAstarMethods) {
   goalPos.x = 1;
   goalPos.y = 4;
 
-  EXPECT_EQ(2, astar.computeCostToCome(startPos, currentPos));
-  EXPECT_EQ(1, astar.computeCostToGo(goalPos, currentPos));
+  EXPECT_EQ(1, astar.computeCostToGo(currentPos));
 }

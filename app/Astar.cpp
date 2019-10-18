@@ -28,15 +28,8 @@ std::vector<Eigen::Vector2d> Astar::aStarAlgorithm() {
 void Astar::pathBacktracking() {
 }
 
-double Astar::computeCostToGo(const Position& pos, const Position& posi) {
+double Astar::computeCostToGo(const Position& pos) {
   (void) pos;
-  (void) posi;
-  return 1.0;
-}
-
-double Astar::computeCostToCome(const Position& pos, const Position& posi) {
-  (void) pos;
-  (void) posi;
   return 1.0;
 }
 
