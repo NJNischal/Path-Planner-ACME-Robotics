@@ -8,6 +8,7 @@ add_executable(
     ../app/NodesManager.cpp
     ../app/Actions.cpp
     ../app/Astar.cpp
+    ../app/Iksolver.cpp
 )
 
 target_include_directories(cpp-test PUBLIC ../vendor/googletest/googletest/include 

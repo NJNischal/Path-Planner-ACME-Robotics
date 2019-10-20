@@ -16,6 +16,15 @@
 #include <vector>
 #include <eigen3/Eigen/Dense>
 
+struct JointAngles {
+  double thetha1 = 10;
+  double thetha2 = 10;
+  double thetha3 = 10;
+  double thetha4 = 10;
+  double thetha5 = 10;
+  double thetha6 = 10;
+};
+
 class Iksolver {
  public:
   Iksolver();
@@ -25,20 +34,20 @@ class Iksolver {
    * @brief This function is used to display the set of 6 joint angles of manipulator(6 dof arm) for every point in the path
    * computed from the A star algorithm
    * @param path,which is the output from A*star algorithm i.e. the shortest path between start and goal points
-   * @return None
+   * @return a vector containing struct of joint angles.
    */
-  void ikSolver(std::vector<Eigen::Vector2d> path);
+  std::vector<JointAngles> ikSolver(std::vector<Eigen::Vector2d> path);
 
  private:
   /**
    * @brief Following are the lengths of each link of manipulator
    */
-  int link1 = 1;
-  int link2 = 1;
-  int link3 = 1;
-  int link4 = 1;
-  int link5 = 1;
-  int link6 = 1;
+  int d1 = 1;
+  int a2 = 1;
+  int a3 = 1;
+  int a4 = 1;
+  int a5 = 1;
+  int a6 = 1;
 };
 
 #endif /* IKSOLVER_H_ */

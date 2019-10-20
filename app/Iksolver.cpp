@@ -19,7 +19,11 @@ Iksolver::Iksolver() {
 Iksolver::~Iksolver() {
 }
 
-void Iksolver::ikSolver(std::vector<Eigen::Vector2d> path) {
+std::vector<JointAngles> Iksolver::ikSolver(std::vector<Eigen::Vector2d> path) {
   (void) path;
+  JointAngles angles;
+  std::vector<JointAngles> solution;
+  solution.emplace_back(angles);
+  return solution;
 }
 

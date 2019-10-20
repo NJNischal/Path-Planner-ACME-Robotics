@@ -18,6 +18,7 @@
 #include "NodesManager.h"
 #include "Actions.h"
 #include "Astar.h"
+#include "Iksolver.h"
 
 /**
  * @brief This is a test for methods in Map class
@@ -139,4 +140,19 @@ TEST(astarTest, testAstarMethods) {
   goalPos.y = 4;
 
   EXPECT_EQ(1, astar.computeCostToGo(currentPos));
+}
+
+TEST(iksolverTest, testIksolverMethods) {
+  Iksolver solve;
+  std::vector<JointAngles> solution;
+  Eigen::Vector2d a1(1, 2);
+  std::vector<Eigen::Vector2d> p { a1 };
+  solution = solve.ikSolver(p);
+
+  EXPECT_EQ(0, solution[0].thetha1);
+  EXPECT_EQ(0, solution[0].thetha2);
+  EXPECT_EQ(0, solution[0].thetha3);
+  EXPECT_EQ(0, solution[0].thetha4);
+  EXPECT_EQ(0, solution[0].thetha5);
+  EXPECT_EQ(0, solution[0].thetha6);
 }
