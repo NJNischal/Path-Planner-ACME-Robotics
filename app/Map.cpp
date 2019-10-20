@@ -41,3 +41,7 @@ bool Map::validityCheck(const Position& newPos) {
 void Map::plotMap() {
   std::cout << "Complete map will be shown.";
 }
+
+void Map::setPath(std::vector<Eigen::Vector2d> path) {
+  (void) path;
+}

@@ -18,8 +18,6 @@
 #ifndef INCLUDE_MAP_H_
 #define INCLUDE_MAP_H_
 
-
-
 /**
  * @brief Map class is used to generate the map with obstacles for the A* Algorithm
  * and check validity of given locations
@@ -59,6 +57,14 @@ class Map {
    * @return None
    */
   void createMap();
+
+  /**
+   * brief Sets the path traced by the robot by digit 5 in the matrix.
+   * @param path is a vector containing the points in the form
+   * of eigen vector traced by the robot.
+   * @return None
+   */
+  void setPath(std::vector<Eigen::Vector2d> path);
 
  private:
 

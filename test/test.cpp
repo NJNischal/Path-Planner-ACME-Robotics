@@ -27,9 +27,14 @@ TEST(mapTest, testMapMethod) {
   Position newPos;
   newPos.x = 1;
   newPos.y = 1;
+  m.createMap();
 
   EXPECT_FALSE(m.obstacleCheck(newPos));
   EXPECT_TRUE(m.validityCheck(newPos));
+
+  Eigen::Vector2d a1(1, 1);
+  std::vector<Eigen::Vector2d> p { a1 };
+  m.setPath(p);
 }
 
 /**
