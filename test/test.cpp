@@ -29,7 +29,7 @@ TEST(mapTest, testMapMethod) {
   newPos.y = 1;
 
   EXPECT_FALSE(m.obstacleCheck(newPos));
-  EXPECT_FALSE(m.validityCheck(newPos));
+  EXPECT_TRUE(m.validityCheck(newPos));
 }
 
 /**
