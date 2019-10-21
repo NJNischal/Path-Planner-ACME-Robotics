@@ -26,8 +26,6 @@ Iksolver::~Iksolver() {
 }
 
 std::vector<JointAngles> Iksolver::ikSolver(std::vector<Eigen::Vector2d> path) {
-  int xc, yc, zc, D;
-  double c1, c3, c23, s1, s2, s23;
   // that stores six angles
   JointAngles angles;
   std::vector<JointAngles> solution;
@@ -53,7 +51,8 @@ std::vector<JointAngles> Iksolver::ikSolver(std::vector<Eigen::Vector2d> path) {
     int ox = 0;
     int oy = 1;
     int oz = 1 - point[0];
-
+    int xc, yc, zc, D;
+    double c1, c3, c23, s1, s2, s23;
     //  Wrist center
     xc = ox - d6 * r13;
     yc = oy - d6 * r23;
