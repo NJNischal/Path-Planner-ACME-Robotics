@@ -1,6 +1,6 @@
 # A* Path Planner and Iksolver for 6 DOF Manipulator
-[![Build Status](https://travis-ci.org/NJNischal/Path-Planner-ACME-Robotics.svg?branch=implementation_development)](https://travis-ci.org/NJNischal/Path-Planner-ACME-Robotics)
-[![Coverage Status](https://coveralls.io/repos/github/NJNischal/Path-Planner-ACME-Robotics/badge.svg?branch=implementation_development)](https://coveralls.io/github/NJNischal/Path-Planner-ACME-Robotics?branch=master)
+[![Build Status](https://travis-ci.org/NJNischal/Path-Planner-ACME-Robotics.svg?branch=master)](https://travis-ci.org/NJNischal/Path-Planner-ACME-Robotics)
+[![Coverage Status](https://coveralls.io/repos/github/NJNischal/Path-Planner-ACME-Robotics/badge.svg?branch=master)](https://coveralls.io/github/NJNischal/Path-Planner-ACME-Robotics?branch=master)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ---
 
@@ -20,9 +20,13 @@ This is the project implements the path planner Module for Acme Robotics. In thi
 
 5) The final ouput is this set of 6 joint angles obtained for each point, when sent as input to the robot traces the path.
 
-##Eigen3
+## Install Eigen3
 
-Eigen3 is a c++ template library for algebra. This library is used in this project for representation of 2D map of robot and other matrix calculations which are used profoundly in our source code. This library is preferred because it is very lightweight and involves integrating only header files. The header files already exists in usr/include folder on the ubuntu machine. This directory can be included into project by adding the following line in Cmakelists.txt file in the 'app' sub-directory of the project.
+In this project, we have used Eigen version 3.3.7. For download instructions, please visit http://eigen.tuxfamily.org/index.php?title=Main_Page#Download  
+
+## Dependencies
+
+Eigen3: Eigen3 is a c++ template library for algebra. This library is used in this project for representation of 2D map of robot and other matrix calculations which are used profoundly in our source code. This library is preferred because it is very lightweight and involves integrating only header files. The header files already exists in usr/include folder on the ubuntu machine. This directory can be included into project by adding the following line in Cmakelists.txt file in the 'app' sub-directory of the project.
 
 In the include_directories add /usr/include/eigen3
 
@@ -41,7 +45,6 @@ make
 Run tests: ./test/cpp-test
 Run program: ./app/shell-app
 ```
-
 
 ## Shareable Links:
 
@@ -82,4 +85,7 @@ sudo apt install doxygen
 
 To create Doxygen documentation
 
-doxygen ./Doxygen
+doxygen-g Creates a Doxyfile, edit the configuration of the doxyfile and run: doxygen ./Doxyfile
+
+
+
