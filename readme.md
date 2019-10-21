@@ -1,15 +1,34 @@
-# C++ Boilerplate
-[![Build Status](https://travis-ci.org/NJNischal/Path-Planner-ACME-Robotics.svg?branch=master)](https://travis-ci.org/NJNischal/Path-Planner-ACME-Robotics)
-[![Coverage Status](https://coveralls.io/repos/github/NJNischal/Path-Planner-ACME-Robotics/badge.svg?branch=master)](https://coveralls.io/github/NJNischal/Path-Planner-ACME-Robotics?branch=master)
+# A* Path Planner and Iksolver for 6 DOF Manipulator
+[![Build Status](https://travis-ci.org/NJNischal/Path-Planner-ACME-Robotics.svg?branch=iteration_development)](https://travis-ci.org/NJNischal/Path-Planner-ACME-Robotics)
+[![Coverage Status](https://coveralls.io/repos/github/NJNischal/Path-Planner-ACME-Robotics/badge.svg?branch=iteration_development)](https://coveralls.io/github/NJNischal/Path-Planner-ACME-Robotics?branch=master)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ---
 
 ## Overview
 
-Simple starter C++ project with:
+This is the project implements the path planner Module for Acme Robotics. In this project, inverse kinematics problem of a robotic manipulator with 6 degrees of freedom is addressed.For this,two points which forms the start and end positions of the end effector of the robot manipulator are given to Astar algorithm which in turn gives the shortest path avoiding obstacles.Using inverse kinematics,for each point on the path, 6 joint angles are calculated.
 
-- cmake
-- googletest
+## Implementation salient points
+
+1) The environment where the robot operates is represented as binary map '1' represents obstacles '0' represents valid position.
+
+2) Given a start and goal position in this map, the shortest path between these two points is found by using A* algorithm.
+
+3) The points on the path thus obtained are transformed into robots base frame.
+
+4) Inverse kinematics is then applied to these points to obtain a set of 6 joint angles for each point on this path.
+
+5) The final ouput is this set of 6 joint angles obtained for each point, when sent as input to the robot traces the path.
+
+##Eigen3
+
+Eigen3 is a c++ template library for algebra. This library is used in this project for representation of 2D map of robot and other matrix calculations which are used profoundly in our source code. This library is preferred because it is very lightweight and involves integrating only header files. The header files already exists in usr/include folder on the ubuntu machine. This directory can be included into project by adding the following line in Cmakelists.txt file in the 'app' sub-directory of the project.
+
+In the include_directories add /usr/include/eigen3
+
+Accordingly in the travis.yml the following line is added so that eigen3 is recognised by travisCI.
+Add the following line in the before_install: section of travis.yml
+- wget http://bitbucket.org/eigen/eigen/get/3.3.4.tar.gz && tar xzf 3.3.4.tar.gz && sudo cp -Rp eigen-eigen-5a0156e40feb /usr/local/include/eigen3
 
 ## Standard install via command-line
 ```
@@ -23,105 +42,44 @@ Run tests: ./test/cpp-test
 Run program: ./app/shell-app
 ```
 
-## Building for code coverage (for assignments beginning in Week 4)
-```
-sudo apt-get install lcov
-cmake -D COVERAGE=ON -D CMAKE_BUILD_TYPE=Debug ../
-make
-make code_coverage
-```
-This generates a index.html page in the build/coverage sub-directory that can be viewed locally in a web browser.
 
-## Working with Eclipse IDE ##
+## Shareable Links:
 
-## Installation
+Sprint notes: 
+https://docs.google.com/document/d/12OItDMsqb8h6DQTVezA4NGi-M5xf9JzFdQqQbvPX68Q/edit?ts=5d9f4c66
 
-In your Eclipse workspace directory (or create a new one), checkout the repo (and submodules)
-```
-mkdir -p ~/workspace
-cd ~/workspace
-git clone --recursive https://github.com/dpiet/cpp-boilerplate
-```
+AIP Template:
+https://docs.google.com/spreadsheets/d/1fC9TYi5srTVPyc5ghDMLPsvgVkAj7jlxIm-aA8zec2o/edit?ts=5d9f4b72#gid=0
 
-In your work directory, use cmake to create an Eclipse project for an [out-of-source build] of cpp-boilerplate
+## License
+MIT License
 
-```
-cd ~/workspace
-mkdir -p boilerplate-eclipse
-cd boilerplate-eclipse
-cmake -G "Eclipse CDT4 - Unix Makefiles" -D CMAKE_BUILD_TYPE=Debug -D CMAKE_ECLIPSE_VERSION=4.7.0 -D CMAKE_CXX_COMPILER_ARG1=-std=c++14 ../cpp-boilerplate/
-```
+Copyright (c) 2019 RAJA SRINIVAS, JAGADESH NISCHAL NAGIREDDI, VAMSHI KUMAR
 
-## Import
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-Open Eclipse, go to File -> Import -> General -> Existing Projects into Workspace -> 
-Select "boilerplate-eclipse" directory created previously as root directory -> Finish
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-# Edit
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
-Source files may be edited under the "[Source Directory]" label in the Project Explorer.
+## Doxygen
 
+To install doxygen 
 
-## Build
+sudo apt install doxygen
 
-To build the project, in Eclipse, unfold boilerplate-eclipse project in Project Explorer,
-unfold Build Targets, double click on "all" to build all projects.
+To create Doxygen documentation
 
-## Run
-
-1. In Eclipse, right click on the boilerplate-eclipse in Project Explorer,
-select Run As -> Local C/C++ Application
-
-2. Choose the binaries to run (e.g. shell-app, cpp-test for unit testing)
-
-
-## Debug
-
-
-1. Set breakpoint in source file (i.e. double click in the left margin on the line you want 
-the program to break).
-
-2. In Eclipse, right click on the boilerplate-eclipse in Project Explorer, select Debug As -> 
-Local C/C++ Application, choose the binaries to run (e.g. shell-app).
-
-3. If prompt to "Confirm Perspective Switch", select yes.
-
-4. Program will break at the breakpoint you set.
-
-5. Press Step Into (F5), Step Over (F6), Step Return (F7) to step/debug your program.
-
-6. Right click on the variable in editor to add watch expression to watch the variable in 
-debugger window.
-
-7. Press Terminate icon to terminate debugging and press C/C++ icon to switch back to C/C++ 
-perspetive view (or Windows->Perspective->Open Perspective->C/C++).
-
-
-## Plugins
-
-- CppChEclipse
-
-    To install and run cppcheck in Eclipse
-
-    1. In Eclipse, go to Window -> Preferences -> C/C++ -> cppcheclipse.
-    Set cppcheck binary path to "/usr/bin/cppcheck".
-
-    2. To run CPPCheck on a project, right click on the project name in the Project Explorer 
-    and choose cppcheck -> Run cppcheck.
-
-
-- Google C++ Sytle
-
-    To include and use Google C++ Style formatter in Eclipse
-
-    1. In Eclipse, go to Window -> Preferences -> C/C++ -> Code Style -> Formatter. 
-    Import [eclipse-cpp-google-style][reference-id-for-eclipse-cpp-google-style] and apply.
-
-    2. To use Google C++ style formatter, right click on the source code or folder in 
-    Project Explorer and choose Source -> Format
-
-[reference-id-for-eclipse-cpp-google-style]: https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-cpp-google-style.xml
-
-- Git
-
-    It is possible to manage version control through Eclipse and the git plugin, but it typically requires creating another project. If you're interested in this, try it out yourself and contact me on Canvas.
+doxygen ./Doxygen
