@@ -2,12 +2,17 @@
  * @copyright 2019
  * @copyright MIT License
  * @file Astar.cpp
- * Design
+ * Design (Phase 1)
  * @author Nischal NJ - Driver
  * @author Vamshi - Navigator
- * @author Raja - Design pattern
+ * @author Raja - Design keeper
+ * @date 12/10/2019
+ * Implementation (Phase 2)
+ * @author Nischal Nj - Design keeper
+ * @author Vamshi - Navigator
+ * @author Raja - Driver
+ * @date 20/10/2019
  * @version 1.0
- * @date 11/10/2019
  * @brief cpp implementation file for Astar class which is used to compute the shortest path between two points avoiding obstacles.
  */
 
@@ -28,31 +33,35 @@ std::vector<Eigen::Vector2d> Astar::aStarAlgorithm() {
 void Astar::pathBacktracking() {
 }
 
+void Astar::checkAndUpdate(const Position& currentPosition,
+                           const Position& newPosition, double d) {
+  (void) currentPosition;
+  (void) newPosition;
+  (void) d;
+
+}
+
 double Astar::computeCostToGo(const Position& pos) {
-  (void) pos;
-  return 1.0;
+  double cost = sqrt(
+      pow((goalPosition.x - pos.x), 2) + pow((goalPosition.y - pos.y), 2));
+  return cost;
 }
 
 Position Astar::getStartPosition() {
-  Position posi;
-  posi.x = 5;
-  posi.y = 6;
-  return posi;
+  return startPosition;
 }
 
 Position Astar::getGoalPosition() {
-  Position posi;
-  posi.x = 5;
-  posi.y = 6;
-  return posi;
+  return goalPosition;
 }
 
 void Astar::setStartPosition(int x, int y) {
-  (void) x;
-  (void) y;
+  startPosition.x = x;
+  startPosition.y = y;
 }
 
 void Astar::setGoalPosition(int x, int y) {
-  (void) x;
-  (void) y;
+  goalPosition.x = x;
+  goalPosition.y = y;
 }
+
