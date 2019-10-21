@@ -140,7 +140,6 @@ TEST(astarTest, testAstarMethods) {
     EXPECT_EQ(a[1], b[1]);
     ++iter2;
   }
-
 }
 
 TEST(iksolverTest, testIksolverMethods) {

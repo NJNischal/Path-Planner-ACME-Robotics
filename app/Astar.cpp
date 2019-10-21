@@ -30,7 +30,6 @@ std::vector<Eigen::Vector2d> Astar::aStarAlgorithm() {
   currentPosition.y = startPosition.y;
 
   while (!(currentPosition == goalPosition)) {
-
     // marking current position as visited
     manageNodes.updateVisited(currentPosition);
 
@@ -71,7 +70,6 @@ std::vector<Eigen::Vector2d> Astar::aStarAlgorithm() {
     std::cout << *iter << std::endl;
   }
   return path;
-
 }
 
 void Astar::pathBacktracking() {
@@ -90,7 +88,6 @@ void Astar::pathBacktracking() {
     path.push_back(v);
     currentNode.x = px;
     currentNode.y = py;
-
   }
   std::reverse(path.begin(), path.end());
 }
@@ -128,7 +125,6 @@ void Astar::checkAndUpdate(const Position& currentPosition,
       }
     }
   }
-
 }
 
 double Astar::computeCostToGo(const Position& pos) {
@@ -154,4 +150,3 @@ void Astar::setGoalPosition(int x, int y) {
   goalPosition.x = x;
   goalPosition.y = y;
 }
-
