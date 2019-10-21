@@ -1,0 +1,202 @@
+[100%] Resetting code coverage counters to zero.
+Processing code coverage counters and generating report.
+Deleting all .da files in . and subdirectories
+Done.
+[==========] Running 5 tests from 5 test cases.
+[----------] Global test environment set-up.
+[----------] 1 test from mapTest
+[ RUN      ] mapTest.testMapMethod
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 1 1 1 1 0 0 0 0 0 0 1 1 1 1 0 0 0 0
+0 0 1 1 1 1 0 0 0 0 0 0 1 1 1 1 0 0 0 0
+0 0 1 1 1 1 0 0 0 0 0 0 1 1 1 1 0 0 0 0
+0 0 1 1 1 1 0 0 0 0 0 0 1 1 1 1 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+0 0 0 0 0 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+0 0 0 0 0 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+0 0 0 0 0 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+[       OK ] mapTest.testMapMethod (1 ms)
+[----------] 1 test from mapTest (1 ms total)
+
+[----------] 1 test from actionsTest
+[ RUN      ] actionsTest.testActionsMethods
+[       OK ] actionsTest.testActionsMethods (0 ms)
+[----------] 1 test from actionsTest (0 ms total)
+
+[----------] 1 test from nodesTest
+[ RUN      ] nodesTest.testNodesManagerMethods
+[       OK ] nodesTest.testNodesManagerMethods (0 ms)
+[----------] 1 test from nodesTest (0 ms total)
+
+[----------] 1 test from astarTest
+[ RUN      ] astarTest.testAstarMethods
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 1 1 1 1 0 0 0 0 0 0 1 1 1 1 0 0 0 0
+0 0 1 1 1 1 0 0 0 0 0 0 1 1 1 1 0 0 0 0
+0 0 1 1 1 1 0 0 0 0 0 0 1 1 1 1 0 0 0 0
+0 0 1 1 1 1 0 0 0 0 0 0 1 1 1 1 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+0 0 0 0 0 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+0 0 0 0 0 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+0 0 0 0 0 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+1
+1
+1
+2
+1
+3
+1
+4
+[       OK ] astarTest.testAstarMethods (0 ms)
+[----------] 1 test from astarTest (0 ms total)
+
+[----------] 1 test from iksolverTest
+[ RUN      ] iksolverTest.testIksolverMethods
+[       OK ] iksolverTest.testIksolverMethods (1 ms)
+[----------] 1 test from iksolverTest (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 5 tests from 5 test cases ran. (2 ms total)
+[  PASSED  ] 5 tests.
+Capturing coverage data from .
+Found gcov version: 5.4.0
+Scanning . for .gcda files ...
+Found 8 data files in .
+Processing test/CMakeFiles/cpp-test.dir/__/app/Actions.cpp.gcda
+Processing test/CMakeFiles/cpp-test.dir/__/app/NodesManager.cpp.gcda
+Processing test/CMakeFiles/cpp-test.dir/__/app/Astar.cpp.gcda
+Processing test/CMakeFiles/cpp-test.dir/__/app/Map.cpp.gcda
+Processing test/CMakeFiles/cpp-test.dir/__/app/Iksolver.cpp.gcda
+Processing test/CMakeFiles/cpp-test.dir/test.cpp.gcda
+Processing test/CMakeFiles/cpp-test.dir/main.cpp.gcda
+Processing vendor/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.gcda
+Finished .info-file creation
+Reading tracefile /home/nischal/workspace/Path-Planner-ACME-Robotics/build/coverage.info
+Removing /home/nischal/workspace/Path-Planner-ACME-Robotics/vendor/googletest/googletest/include/gtest/gtest-message.h
+Removing /home/nischal/workspace/Path-Planner-ACME-Robotics/vendor/googletest/googletest/include/gtest/gtest-printers.h
+Removing /home/nischal/workspace/Path-Planner-ACME-Robotics/vendor/googletest/googletest/include/gtest/gtest-test-part.h
+Removing /home/nischal/workspace/Path-Planner-ACME-Robotics/vendor/googletest/googletest/include/gtest/gtest.h
+Removing /home/nischal/workspace/Path-Planner-ACME-Robotics/vendor/googletest/googletest/include/gtest/internal/gtest-death-test-internal.h
+Removing /home/nischal/workspace/Path-Planner-ACME-Robotics/vendor/googletest/googletest/include/gtest/internal/gtest-filepath.h
+Removing /home/nischal/workspace/Path-Planner-ACME-Robotics/vendor/googletest/googletest/include/gtest/internal/gtest-internal.h
+Removing /home/nischal/workspace/Path-Planner-ACME-Robotics/vendor/googletest/googletest/include/gtest/internal/gtest-param-util.h
+Removing /home/nischal/workspace/Path-Planner-ACME-Robotics/vendor/googletest/googletest/include/gtest/internal/gtest-port.h
+Removing /home/nischal/workspace/Path-Planner-ACME-Robotics/vendor/googletest/googletest/src/gtest-death-test.cc
+Removing /home/nischal/workspace/Path-Planner-ACME-Robotics/vendor/googletest/googletest/src/gtest-filepath.cc
+Removing /home/nischal/workspace/Path-Planner-ACME-Robotics/vendor/googletest/googletest/src/gtest-internal-inl.h
+Removing /home/nischal/workspace/Path-Planner-ACME-Robotics/vendor/googletest/googletest/src/gtest-port.cc
+Removing /home/nischal/workspace/Path-Planner-ACME-Robotics/vendor/googletest/googletest/src/gtest-printers.cc
+Removing /home/nischal/workspace/Path-Planner-ACME-Robotics/vendor/googletest/googletest/src/gtest-test-part.cc
+Removing /home/nischal/workspace/Path-Planner-ACME-Robotics/vendor/googletest/googletest/src/gtest-typed-test.cc
+Removing /home/nischal/workspace/Path-Planner-ACME-Robotics/vendor/googletest/googletest/src/gtest.cc
+Removing /usr/include/c++/5/bits/alloc_traits.h
+Removing /usr/include/c++/5/bits/allocator.h
+Removing /usr/include/c++/5/bits/basic_string.h
+Removing /usr/include/c++/5/bits/basic_string.tcc
+Removing /usr/include/c++/5/bits/char_traits.h
+Removing /usr/include/c++/5/bits/ios_base.h
+Removing /usr/include/c++/5/bits/list.tcc
+Removing /usr/include/c++/5/bits/move.h
+Removing /usr/include/c++/5/bits/predefined_ops.h
+Removing /usr/include/c++/5/bits/stl_algo.h
+Removing /usr/include/c++/5/bits/stl_algobase.h
+Removing /usr/include/c++/5/bits/stl_construct.h
+Removing /usr/include/c++/5/bits/stl_function.h
+Removing /usr/include/c++/5/bits/stl_iterator.h
+Removing /usr/include/c++/5/bits/stl_iterator_base_funcs.h
+Removing /usr/include/c++/5/bits/stl_iterator_base_types.h
+Removing /usr/include/c++/5/bits/stl_list.h
+Removing /usr/include/c++/5/bits/stl_map.h
+Removing /usr/include/c++/5/bits/stl_multimap.h
+Removing /usr/include/c++/5/bits/stl_pair.h
+Removing /usr/include/c++/5/bits/stl_set.h
+Removing /usr/include/c++/5/bits/stl_tree.h
+Removing /usr/include/c++/5/bits/stl_uninitialized.h
+Removing /usr/include/c++/5/bits/stl_vector.h
+Removing /usr/include/c++/5/bits/vector.tcc
+Removing /usr/include/c++/5/exception
+Removing /usr/include/c++/5/ext/aligned_buffer.h
+Removing /usr/include/c++/5/ext/alloc_traits.h
+Removing /usr/include/c++/5/ext/new_allocator.h
+Removing /usr/include/c++/5/ext/type_traits.h
+Removing /usr/include/c++/5/initializer_list
+Removing /usr/include/c++/5/iomanip
+Removing /usr/include/c++/5/iostream
+Removing /usr/include/c++/5/new
+Removing /usr/include/c++/5/tuple
+Removing /usr/include/c++/5/typeinfo
+Removing /usr/lib/gcc/x86_64-linux-gnu/5/include/emmintrin.h
+Removing /usr/local/include/eigen3/Eigen/src/Core/Assign.h
+Removing /usr/local/include/eigen3/Eigen/src/Core/AssignEvaluator.h
+Removing /usr/local/include/eigen3/Eigen/src/Core/Block.h
+Removing /usr/local/include/eigen3/Eigen/src/Core/CommaInitializer.h
+Removing /usr/local/include/eigen3/Eigen/src/Core/CoreEvaluators.h
+Removing /usr/local/include/eigen3/Eigen/src/Core/CwiseNullaryOp.h
+Removing /usr/local/include/eigen3/Eigen/src/Core/DenseBase.h
+Removing /usr/local/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h
+Removing /usr/local/include/eigen3/Eigen/src/Core/DenseStorage.h
+Removing /usr/local/include/eigen3/Eigen/src/Core/EigenBase.h
+Removing /usr/local/include/eigen3/Eigen/src/Core/GenericPacketMath.h
+Removing /usr/local/include/eigen3/Eigen/src/Core/IO.h
+Removing /usr/local/include/eigen3/Eigen/src/Core/MapBase.h
+Removing /usr/local/include/eigen3/Eigen/src/Core/MathFunctions.h
+Removing /usr/local/include/eigen3/Eigen/src/Core/Matrix.h
+Removing /usr/local/include/eigen3/Eigen/src/Core/MatrixBase.h
+Removing /usr/local/include/eigen3/Eigen/src/Core/NumTraits.h
+Removing /usr/local/include/eigen3/Eigen/src/Core/PlainObjectBase.h
+Removing /usr/local/include/eigen3/Eigen/src/Core/Swap.h
+Removing /usr/local/include/eigen3/Eigen/src/Core/Transpose.h
+Removing /usr/local/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h
+Removing /usr/local/include/eigen3/Eigen/src/Core/functors/AssignmentFunctors.h
+Removing /usr/local/include/eigen3/Eigen/src/Core/functors/NullaryFunctors.h
+Removing /usr/local/include/eigen3/Eigen/src/Core/util/Memory.h
+Removing /usr/local/include/eigen3/Eigen/src/Core/util/Meta.h
+Removing /usr/local/include/eigen3/Eigen/src/Core/util/XprHelper.h
+Removing /usr/local/include/eigen3/Eigen/src/plugins/BlockMethods.h
+Deleted 81 files
+Writing data to /home/nischal/workspace/Path-Planner-ACME-Robotics/build/coverage.info.cleaned
+Summary coverage rate:
+  lines......: 96.6% (344 of 356 lines)
+  functions..: 98.7% (74 of 75 functions)
+  branches...: no data found
+Reading data file /home/nischal/workspace/Path-Planner-ACME-Robotics/build/coverage.info.cleaned
+Found 8 entries.
+Found common filename prefix "/home/nischal/workspace/Path-Planner-ACME-Robotics"
+Writing .css and .png files.
+Generating output.
+Processing file app/NodesManager.cpp
+Processing file app/Actions.cpp
+Processing file app/Astar.cpp
+Processing file app/Iksolver.cpp
+Processing file app/Map.cpp
+Processing file include/NodesManager.h
+Processing file test/main.cpp
+Processing file test/test.cpp
+Writing directory view page.
+Overall coverage rate:
+  lines......: 96.6% (344 of 356 lines)
+  functions..: 98.7% (74 of 75 functions)
+Open ./coverage/index.html in your browser to view the coverage report.
+[100%] Built target code_coverage

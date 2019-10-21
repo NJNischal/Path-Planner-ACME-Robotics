@@ -1,0 +1,8 @@
+Done processing ./test/test.cpp
+Done processing ./test/main.cpp
+Done processing ./app/Astar.cpp
+Done processing ./app/NodesManager.cpp
+Done processing ./app/Map.cpp
+Done processing ./app/Actions.cpp
+Done processing ./app/main.cpp
+Done processing ./app/Iksolver.cpp

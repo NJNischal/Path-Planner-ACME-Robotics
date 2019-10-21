@@ -3,11 +3,11 @@
  * @copyright MIT License
  * @file test.cpp
  * Design (Phase 1)
- * @author Nischal NJ - Navigator
+ * @author Nischal NJ - Driver
  * @author Vamshi - Design Keeper
- * @author Raja - Driver
+ * @author Raja - Navigator
  * @version 1.0
- * @date 11/10/2019
+ * @date 21/10/2019
  * @brief Unit test cases for testing classes
  * in the environment in which the robot operates.
  */
@@ -100,24 +100,9 @@ TEST(nodesTest, testNodesManagerMethods) {
  * @brief This is a test for methods in Astar class
  */
 TEST(astarTest, testAstarMethods) {
-  Astar astar;
-
-  Eigen::Vector2d a1(1, 1);
-  Eigen::Vector2d b1(1, 2);
-  Eigen::Vector2d c1(1, 3);
-  Eigen::Vector2d d1(1, 4);
-  std::vector<Eigen::Vector2d> p { a1, b1, c1, d1 };
-  std::vector<Eigen::Vector2d> path = astar.aStarAlgorithm();
-  std::vector<Eigen::Vector2d>::iterator iter2 = path.begin();
-
-  for (std::vector<Eigen::Vector2d>::iterator iter1 = p.begin();
-      iter1 != p.end(); ++iter1) {
-    Eigen::Vector2d a = *iter1;
-    Eigen::Vector2d b = *iter2;
-    EXPECT_EQ(a[0], b[0]);
-    EXPECT_EQ(a[1], b[1]);
-    ++iter2;
-  }
+  Map map;
+  map.createMap();
+  Astar astar(map);
 
   astar.setStartPosition(1, 1);
   EXPECT_EQ(1, astar.getStartPosition().x);
@@ -140,6 +125,23 @@ TEST(astarTest, testAstarMethods) {
   goalPos.y = 4;
 
   EXPECT_EQ(1, astar.computeCostToGo(currentPos));
+
+  Eigen::Vector2d a1(1, 1);
+  Eigen::Vector2d b1(1, 2);
+  Eigen::Vector2d c1(1, 3);
+  Eigen::Vector2d d1(1, 4);
+  std::vector<Eigen::Vector2d> p { a1, b1, c1, d1 };
+  std::vector<Eigen::Vector2d> path = astar.aStarAlgorithm();
+  std::vector<Eigen::Vector2d>::iterator iter2 = path.begin();
+
+  for (std::vector<Eigen::Vector2d>::iterator iter1 = p.begin();
+      iter1 != p.end(); ++iter1) {
+    Eigen::Vector2d a = *iter1;
+    Eigen::Vector2d b = *iter2;
+    EXPECT_EQ(a[0], b[0]);
+    EXPECT_EQ(a[1], b[1]);
+    ++iter2;
+  }
 }
 
 TEST(iksolverTest, testIksolverMethods) {
@@ -149,10 +151,11 @@ TEST(iksolverTest, testIksolverMethods) {
   std::vector<Eigen::Vector2d> p { a1 };
   solution = solve.ikSolver(p);
 
-  EXPECT_EQ(0, solution[0].thetha1);
-  EXPECT_EQ(0, solution[0].thetha2);
-  EXPECT_EQ(0, solution[0].thetha3);
-  EXPECT_EQ(0, solution[0].thetha4);
-  EXPECT_EQ(0, solution[0].thetha5);
-  EXPECT_EQ(0, solution[0].thetha6);
+  // angles in degrees
+  EXPECT_NEAR(-90, solution[0].thetha1, 0.5);
+  EXPECT_NEAR(-0.413, solution[0].thetha2, 0.5);
+  EXPECT_NEAR(90, solution[0].thetha3, 0.5);
+  EXPECT_NEAR(-149.578, solution[0].thetha4, 0.5);
+  EXPECT_NEAR(63.3798, solution[0].thetha5, 0.5);
+  EXPECT_NEAR(0, solution[0].thetha6, 0.5);
 }

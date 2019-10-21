@@ -6,8 +6,13 @@
  * @author Nischal NJ - Navigator
  * @author Vamshi - Design Keeper
  * @author Raja - Driver
+ * @date 12/10/2019
+ * Implementation (Phase 2)
+ * @author Nischal Nj - Navigator
+ * @author Vamshi - Driver
+ * @author Raja - Design keeper
+ * @date 20/10/2019
  * @version 1.0
- * @date 11/10/2019
  * @brief Header file for class NodesManager.
  */
 
@@ -22,7 +27,12 @@
 struct Position {
   int x = 0;
   int y = 0;
+
 };
+
+inline bool operator==(const Position& pos1, const Position& pos2) {
+   return (pos1.x == pos2.x && pos1.y == pos2.y);
+ }
 
 /**
  * @brief NodesManager class is used to manage and update all the matrices that is required for

@@ -6,8 +6,13 @@
  * @author Nischal NJ - Driver
  * @author Vamshi - Navigator
  * @author Raja - Design keeper
- * @version 1.0
  * @date 11/10/2019
+ * Implementation (Phase 2)
+ * @author Nischal Nj - Navigator
+ * @author Vamshi - Design keeper
+ * @author Raja - Driver
+ * @date 19/10/2019
+ * @version 1.0
  * @brief Class definition of Map of environment
  */
 

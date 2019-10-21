@@ -2,18 +2,28 @@
  * @copyright 2019
  * @copyright MIT License
  * @file Astar.h
- * Design
+ * Design (Phase 1)
  * @author Nischal NJ - Driver
  * @author Vamshi - Navigator
- * @author Raja - Design pattern
+ * @author Raja - Design keeper
+ * @date 12/10/2019
+ * Implementation (Phase 2)
+ * @author Nischal Nj - Design keeper
+ * @author Vamshi - Navigator
+ * @author Raja - Driver
+ * @date 20/10/2019
  * @version 1.0
- * @date 11/10/2019
  * @brief header file for Astar class which is used to compute the shortest path between two points avoiding obstacles.
  */
 
 #include "NodesManager.h"
+#include "Actions.h"
+#include "Map.h"
 #include <eigen3/Eigen/Dense>
 #include <vector>
+#include <math.h>
+#include <map>
+#include <iterator>
 
 #ifndef INCLUDE_ASTAR_H_
 #define INCLUDE_ASTAR_H_
@@ -24,7 +34,10 @@
  */
 class Astar {
  public:
-  Astar();
+  /**
+   * one argument constructor that takes object of class map by reference.
+   */
+  explicit Astar(Map& map);
   ~Astar();
 
   /**
@@ -40,6 +53,19 @@ class Astar {
    * @return None
    */
   void pathBacktracking();
+
+  /**
+   * @brief
+   * @param struct position that represents current position of the robot
+   * on the map.
+   * @param struct new position that represents next position of the robot
+   * on the map
+   * @param double d which specifies cost specific to an action 1 for up
+   * down right left. sqrt(2) for remaining four actions.
+   * @return None
+   */
+  void checkAndUpdate(const Position& currentPosition,
+                        const Position& newPosition, double d);
 
   /**
    * @brief Calculates the cost to go for the current position and goal position
@@ -81,6 +107,10 @@ class Astar {
   Position startPosition;
   Position goalPosition;
   std::vector<Eigen::Vector2d> path;
+  NodesManager manageNodes;
+  Actions action;
+  Map &workspace;
+  std::multimap<double, Position> priority;
 };
 
 #endif /* INCLUDE_ASTAR_H_ */
