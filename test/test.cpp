@@ -102,23 +102,6 @@ TEST(nodesTest, testNodesManagerMethods) {
 TEST(astarTest, testAstarMethods) {
   Astar astar;
 
-  Eigen::Vector2d a1(1, 1);
-  Eigen::Vector2d b1(1, 2);
-  Eigen::Vector2d c1(1, 3);
-  Eigen::Vector2d d1(1, 4);
-  std::vector<Eigen::Vector2d> p { a1, b1, c1, d1 };
-  std::vector<Eigen::Vector2d> path = astar.aStarAlgorithm();
-  std::vector<Eigen::Vector2d>::iterator iter2 = path.begin();
-
-  for (std::vector<Eigen::Vector2d>::iterator iter1 = p.begin();
-      iter1 != p.end(); ++iter1) {
-    Eigen::Vector2d a = *iter1;
-    Eigen::Vector2d b = *iter2;
-    EXPECT_EQ(a[0], b[0]);
-    EXPECT_EQ(a[1], b[1]);
-    ++iter2;
-  }
-
   astar.setStartPosition(1, 1);
   EXPECT_EQ(1, astar.getStartPosition().x);
   EXPECT_EQ(1, astar.getStartPosition().y);
@@ -140,6 +123,24 @@ TEST(astarTest, testAstarMethods) {
   goalPos.y = 4;
 
   EXPECT_EQ(1, astar.computeCostToGo(currentPos));
+
+  Eigen::Vector2d a1(1, 1);
+  Eigen::Vector2d b1(1, 2);
+  Eigen::Vector2d c1(1, 3);
+  Eigen::Vector2d d1(1, 4);
+  std::vector<Eigen::Vector2d> p { a1, b1, c1, d1 };
+  std::vector<Eigen::Vector2d> path = astar.aStarAlgorithm();
+  std::vector<Eigen::Vector2d>::iterator iter2 = path.begin();
+
+  for (std::vector<Eigen::Vector2d>::iterator iter1 = p.begin();
+      iter1 != p.end(); ++iter1) {
+    Eigen::Vector2d a = *iter1;
+    Eigen::Vector2d b = *iter2;
+    EXPECT_EQ(a[0], b[0]);
+    EXPECT_EQ(a[1], b[1]);
+    ++iter2;
+  }
+
 }
 
 TEST(iksolverTest, testIksolverMethods) {

@@ -25,12 +25,74 @@ Astar::~Astar() {
 }
 
 std::vector<Eigen::Vector2d> Astar::aStarAlgorithm() {
-  Eigen::Vector2d a(5, 6);
-  std::vector<Eigen::Vector2d> p(4, a);
-  return p;
+  Position currentPosition;
+  currentPosition.x = startPosition.x;
+  currentPosition.y = startPosition.y;
+
+  while (!(currentPosition == goalPosition)) {
+
+    // marking current position as visited
+    manageNodes.updateVisited(currentPosition);
+
+    // write all actions
+    Position newPosition = action.moveUp(currentPosition);
+    checkAndUpdate(currentPosition, newPosition, 1);
+
+    newPosition = action.moveDown(currentPosition);
+    checkAndUpdate(currentPosition, newPosition, 1);
+
+    newPosition = action.moveRight(currentPosition);
+    checkAndUpdate(currentPosition, newPosition, 1);
+
+    newPosition = action.moveLeft(currentPosition);
+    checkAndUpdate(currentPosition, newPosition, 1);
+
+    newPosition = action.moveUpRight(currentPosition);
+    checkAndUpdate(currentPosition, newPosition, sqrt(2));
+
+    newPosition = action.moveUpLeft(currentPosition);
+    checkAndUpdate(currentPosition, newPosition, sqrt(2));
+
+    newPosition = action.moveDownRight(currentPosition);
+    checkAndUpdate(currentPosition, newPosition, sqrt(2));
+
+    newPosition = action.moveDownLeft(currentPosition);
+    checkAndUpdate(currentPosition, newPosition, sqrt(2));
+
+    std::multimap<double, Position>::iterator iter;
+    iter = priority.begin();
+    currentPosition = iter->second;
+    priority.erase(iter);
+  }
+
+  pathBacktracking();
+
+  for (auto iter = path.begin(); iter != path.end(); ++iter) {
+    std::cout << *iter << std::endl;
+  }
+  return path;
+
 }
 
 void Astar::pathBacktracking() {
+  Position currentNode;
+  currentNode.x = goalPosition.x;
+  currentNode.y = goalPosition.y;
+  Eigen::Vector2d v(currentNode.x, currentNode.y);
+  path.push_back(v);
+  while (!(currentNode == startPosition)) {
+    int px, py, p;
+    p = manageNodes.getParent(currentNode);
+    px = p / 100;
+    py = p % 100;
+    v[0] = px;
+    v[1] = py;
+    path.push_back(v);
+    currentNode.x = px;
+    currentNode.y = py;
+
+  }
+  std::reverse(path.begin(), path.end());
 }
 
 void Astar::checkAndUpdate(const Position& currentPosition,
