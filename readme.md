@@ -87,5 +87,10 @@ To create Doxygen documentation
 
 doxygen -g Creates a Doxyfile, edit the configuration of the doxyfile and run: doxygen ./Doxyfile
 
+## Known issues and Bugs
+
+There were segmentation faults with the indexing of eigen matrix. 
+There were some bugs with Eclipse IDE where it doesn't build the changes after changes were made.
+
 
 
