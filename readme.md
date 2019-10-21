@@ -16,6 +16,10 @@ The main motive of the project is to solve the objective of welding operation on
 
 A star algorithm is used to for shortest path finding.In this whole map is divided into grid,each part of grid is called node.On every node 8 actions are performed to move i.e. in 8 directions to give 8 child nodes.Next node of path is found by using total cost which is sum of cost to come and cost to go.the next node is the node with least total cost.If an obstacle comes in one of the 8 child nodes,then this is not considered.This above method is followed till goal is reached.
 
+## Personnal
+
+All the 3 people of group are robotic graduate students of UMD insterested in planning and algorithms of autonomous robots and robotic manipulators.
+
 ## Implementation salient points
 
 1) The environment where the robot operates is represented as binary map '1' represents obstacles '0' represents valid position.
@@ -27,6 +31,8 @@ A star algorithm is used to for shortest path finding.In this whole map is divid
 4) Inverse kinematics is then applied to these points to obtain a set of 6 joint angles for each point on this path.
 
 5) The final ouput is this set of 6 joint angles obtained for each point, when sent as input to the robot traces the path.
+
+
 
 ## Install Eigen3
 
