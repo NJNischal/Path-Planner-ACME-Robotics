@@ -8,6 +8,10 @@
 
 This is the project implements the path planner Module for Acme Robotics. In this project, inverse kinematics problem of a robotic manipulator with 6 degrees of freedom is addressed.For this,two points which forms the start and end positions of the end effector of the robot manipulator are given to Astar algorithm which in turn gives the shortest path avoiding obstacles.Using inverse kinematics,for each point on the path, 6 joint angles are calculated.
 
+## Purpose
+
+The main motive of the project is to solve the objective of welding operation on given plate by join 2 plates .This task is most important in development of whole product.Human involvement cannot guarantee safe and efficient outcome.So robot is needed.To accomplish this task robot need to move in the plane by avoiding obstacles within shortest path and shortest time.This can be done by using Astar algorithm and giving the solution obtained to inverse kinematics solver to get joint angles.In this task,6 degree of freedom robot manipulator is used.Hence we get 6 joint angles for every point in the path.When these points are given to robot as input at intervals till the alst point,the end effector follows the path from start to end point.
+
 ## Implementation salient points
 
 1) The environment where the robot operates is represented as binary map '1' represents obstacles '0' represents valid position.
