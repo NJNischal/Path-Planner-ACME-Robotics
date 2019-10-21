@@ -12,6 +12,10 @@ This is the project implements the path planner Module for Acme Robotics. In thi
 
 The main motive of the project is to solve the objective of welding operation on given plate by join 2 plates .This task is most important in development of whole product.Human involvement cannot guarantee safe and efficient outcome.So robot is needed.To accomplish this task robot need to move in the plane by avoiding obstacles within shortest path and shortest time.This can be done by using Astar algorithm and giving the solution obtained to inverse kinematics solver to get joint angles.In this task,6 degree of freedom robot manipulator is used.Hence we get 6 joint angles for every point in the path.When these points are given to robot as input at intervals till the alst point,the end effector follows the path from start to end point.
 
+## Astar Algorithm
+
+A star algorithm is used to for shortest path finding.In this whole map is divided into grid,each part of grid is called node.On every node 8 actions are performed to move i.e. in 8 directions to give 8 child nodes.Next node of path is found by using total cost which is sum of cost to come and cost to go.the next node is the node with least total cost.If an obstacle comes in one of the 8 child nodes,then this is not considered.This above method is followed till goal is reached.
+
 ## Implementation salient points
 
 1) The environment where the robot operates is represented as binary map '1' represents obstacles '0' represents valid position.
@@ -26,7 +30,12 @@ The main motive of the project is to solve the objective of welding operation on
 
 ## Install Eigen3
 
-In this project, we have used Eigen version 3.3.7. For download instructions, please visit http://eigen.tuxfamily.org/index.php?title=Main_Page#Download  
+In this project, we have used Eigen version 3.3.7. For download instructions, please visit http://eigen.tuxfamily.org/index.php?title=Main_Page#Download 
+mkdir build
+cd build
+cmake ..
+make
+make install 
 
 ## Dependencies
 
