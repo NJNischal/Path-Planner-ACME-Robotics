@@ -35,9 +35,37 @@ void Astar::pathBacktracking() {
 
 void Astar::checkAndUpdate(const Position& currentPosition,
                            const Position& newPosition, double d) {
-  (void) currentPosition;
-  (void) newPosition;
-  (void) d;
+  // checks
+  bool check1 = workspace.obstacleCheck(newPosition);
+  bool check2 = workspace.validityCheck(newPosition);
+
+  if (!check1 && check2) {
+    bool status = manageNodes.getVisitedStatus(newPosition);
+    if (!status) {
+      manageNodes.updateVisited(newPosition);
+      int parentId = currentPosition.x * 100 + currentPosition.y;
+      manageNodes.updateParent(newPosition, parentId);
+      auto costGo = computeCostToGo(newPosition);
+      double costCome = manageNodes.getCostToCome(currentPosition) + d;
+      double totalCost = costGo + costCome;
+      manageNodes.updateCostToGo(newPosition, costGo);
+      manageNodes.updateCostToCome(newPosition, costCome);
+      manageNodes.updateCost(newPosition, totalCost);
+      priority.insert(std::pair<double, Position>(totalCost, newPosition));
+    } else {
+      if (manageNodes.getCostToCome(newPosition)
+          > manageNodes.getCostToCome(currentPosition) + d) {
+        auto costGo = computeCostToGo(newPosition);
+        double costCome = manageNodes.getCostToCome(currentPosition) + d;
+        double totalCost = costGo + costCome;
+        manageNodes.updateCostToGo(newPosition, costGo);
+        manageNodes.updateCostToCome(newPosition, costCome);
+        manageNodes.updateCost(newPosition, totalCost);
+        int parentId = currentPosition.x * 100 + currentPosition.y;
+        manageNodes.updateParent(newPosition, parentId);
+      }
+    }
+  }
 
 }
 

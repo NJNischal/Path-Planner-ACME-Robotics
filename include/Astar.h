@@ -104,6 +104,10 @@ class Astar {
   Position startPosition;
   Position goalPosition;
   std::vector<Eigen::Vector2d> path;
+  NodesManager manageNodes;
+  Actions action;
+  Map workspace;
+  std::multimap<double, Position> priority;
 };
 
 #endif /* INCLUDE_ASTAR_H_ */
