@@ -3,11 +3,11 @@
  * @copyright MIT License
  * @file test.cpp
  * Design (Phase 1)
- * @author Nischal NJ - Navigator
+ * @author Nischal NJ - Driver
  * @author Vamshi - Design Keeper
- * @author Raja - Driver
+ * @author Raja - Navigator
  * @version 1.0
- * @date 11/10/2019
+ * @date 21/10/2019
  * @brief Unit test cases for testing classes
  * in the environment in which the robot operates.
  */
@@ -151,10 +151,11 @@ TEST(iksolverTest, testIksolverMethods) {
   std::vector<Eigen::Vector2d> p { a1 };
   solution = solve.ikSolver(p);
 
-  EXPECT_EQ(0, solution[0].thetha1);
-  EXPECT_EQ(0, solution[0].thetha2);
-  EXPECT_EQ(0, solution[0].thetha3);
-  EXPECT_EQ(0, solution[0].thetha4);
-  EXPECT_EQ(0, solution[0].thetha5);
-  EXPECT_EQ(0, solution[0].thetha6);
+  // angles in degrees
+  EXPECT_NEAR(-90, solution[0].thetha1, 0.5);
+  EXPECT_NEAR(-0.413, solution[0].thetha2, 0.5);
+  EXPECT_NEAR(90, solution[0].thetha3, 0.5);
+  EXPECT_NEAR(-149.578, solution[0].thetha4, 0.5);
+  EXPECT_NEAR(63.3798, solution[0].thetha5, 0.5);
+  EXPECT_NEAR(0, solution[0].thetha6, 0.5);
 }
