@@ -1,6 +1,6 @@
 # A* Path Planner and Iksolver for 6 DOF Manipulator
-[![Build Status](https://travis-ci.org/NJNischal/Path-Planner-ACME-Robotics.svg?branch=iteration_development)](https://travis-ci.org/NJNischal/Path-Planner-ACME-Robotics)
-[![Coverage Status](https://coveralls.io/repos/github/NJNischal/Path-Planner-ACME-Robotics/badge.svg?branch=iteration_development)](https://coveralls.io/github/NJNischal/Path-Planner-ACME-Robotics?branch=master)
+[![Build Status](https://travis-ci.org/NJNischal/Path-Planner-ACME-Robotics.svg?branch=implementation_development)](https://travis-ci.org/NJNischal/Path-Planner-ACME-Robotics)
+[![Coverage Status](https://coveralls.io/repos/github/NJNischal/Path-Planner-ACME-Robotics/badge.svg?branch=implementation_development)](https://coveralls.io/github/NJNischal/Path-Planner-ACME-Robotics?branch=master)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ---
 
