@@ -46,7 +46,7 @@ Run tests: ./test/cpp-test
 Run program: ./app/shell-app
 ```
 
-## Shareable Links:
+## Shareable Links for Sprint notes and AIP template:
 
 Sprint notes: 
 https://docs.google.com/document/d/12OItDMsqb8h6DQTVezA4NGi-M5xf9JzFdQqQbvPX68Q/edit?ts=5d9f4c66
@@ -85,7 +85,7 @@ sudo apt install doxygen
 
 To create Doxygen documentation
 
-doxygen-g Creates a Doxyfile, edit the configuration of the doxyfile and run: doxygen ./Doxyfile
+doxygen -g Creates a Doxyfile, edit the configuration of the doxyfile and run: doxygen ./Doxyfile
 
 
 

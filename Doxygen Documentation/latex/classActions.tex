@@ -1,0 +1,194 @@
+\hypertarget{classActions}{}\section{Actions Class Reference}
+\label{classActions}\index{Actions@{Actions}}
+
+
+\hyperlink{classActions}{Actions} class is used to generate movement for the robot in the action space which is in 8 directions.  
+
+
+
+
+{\ttfamily \#include $<$Actions.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structPosition}{Position} \hyperlink{classActions_aa89a2ec6e16b2ccbebdb3a21be930fa6}{move\+Up} (const \hyperlink{structPosition}{Position} \&current\+Pos)
+\begin{DoxyCompactList}\small\item\em Gives the position which is above the current position. \end{DoxyCompactList}\item 
+\hyperlink{structPosition}{Position} \hyperlink{classActions_aa52f67ef3ef76fa821e5a587f9582321}{move\+Down} (const \hyperlink{structPosition}{Position} \&current\+Pos)
+\begin{DoxyCompactList}\small\item\em Gives the position which is below the current position. \end{DoxyCompactList}\item 
+\hyperlink{structPosition}{Position} \hyperlink{classActions_adb21d8d86e5c11a29a0d8755253a739e}{move\+Left} (const \hyperlink{structPosition}{Position} \&current\+Pos)
+\begin{DoxyCompactList}\small\item\em Gives the position which is to the left of the current position. \end{DoxyCompactList}\item 
+\hyperlink{structPosition}{Position} \hyperlink{classActions_a324ac90167fc69643c7dbc2efc779387}{move\+Right} (const \hyperlink{structPosition}{Position} \&current\+Pos)
+\begin{DoxyCompactList}\small\item\em Gives the position which is to the right of the current position. \end{DoxyCompactList}\item 
+\hyperlink{structPosition}{Position} \hyperlink{classActions_a5d57168e20c11b1b07c7f1cbc0419284}{move\+Up\+Right} (const \hyperlink{structPosition}{Position} \&current\+Pos)
+\begin{DoxyCompactList}\small\item\em Gives the position which is to the top-\/right of the current position. \end{DoxyCompactList}\item 
+\hyperlink{structPosition}{Position} \hyperlink{classActions_a86b92a73287773ba08356fbb999fcc61}{move\+Up\+Left} (const \hyperlink{structPosition}{Position} \&current\+Pos)
+\begin{DoxyCompactList}\small\item\em Gives the position which is to the top-\/left of the current position. \end{DoxyCompactList}\item 
+\hyperlink{structPosition}{Position} \hyperlink{classActions_a01769dc63522cc613e8050c2266b0dbf}{move\+Down\+Right} (const \hyperlink{structPosition}{Position} \&current\+Pos)
+\begin{DoxyCompactList}\small\item\em Gives the position which is to the down-\/left of the current position. \end{DoxyCompactList}\item 
+\hyperlink{structPosition}{Position} \hyperlink{classActions_a7ff875712d63d34aeb9760672d88e05a}{move\+Down\+Left} (const \hyperlink{structPosition}{Position} \&current\+Pos)
+\begin{DoxyCompactList}\small\item\em Gives the position which is to the bottom right of the current position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classActions}{Actions} class is used to generate movement for the robot in the action space which is in 8 directions. 
+
+\subsection{Member Function Documentation}
+\index{Actions@{Actions}!move\+Down@{move\+Down}}
+\index{move\+Down@{move\+Down}!Actions@{Actions}}
+\subsubsection[{\texorpdfstring{move\+Down(const Position \&current\+Pos)}{moveDown(const Position &currentPos)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position} Actions\+::move\+Down (
+\begin{DoxyParamCaption}
+\item[{const {\bf Position} \&}]{current\+Pos}
+\end{DoxyParamCaption}
+)}\hypertarget{classActions_aa52f67ef3ef76fa821e5a587f9582321}{}\label{classActions_aa52f67ef3ef76fa821e5a587f9582321}
+
+
+Gives the position which is below the current position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{structPosition}{Position}} & struct which has x,y value, coordinates of a given location \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{structPosition}{Position} struct which has x,y value, coordinates of new position. 
+\end{DoxyReturn}
+\index{Actions@{Actions}!move\+Down\+Left@{move\+Down\+Left}}
+\index{move\+Down\+Left@{move\+Down\+Left}!Actions@{Actions}}
+\subsubsection[{\texorpdfstring{move\+Down\+Left(const Position \&current\+Pos)}{moveDownLeft(const Position &currentPos)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position} Actions\+::move\+Down\+Left (
+\begin{DoxyParamCaption}
+\item[{const {\bf Position} \&}]{current\+Pos}
+\end{DoxyParamCaption}
+)}\hypertarget{classActions_a7ff875712d63d34aeb9760672d88e05a}{}\label{classActions_a7ff875712d63d34aeb9760672d88e05a}
+
+
+Gives the position which is to the bottom right of the current position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{structPosition}{Position}} & struct which has x,y value, coordinates of a given location \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{structPosition}{Position} struct which has x,y value, coordinates of new position. 
+\end{DoxyReturn}
+\index{Actions@{Actions}!move\+Down\+Right@{move\+Down\+Right}}
+\index{move\+Down\+Right@{move\+Down\+Right}!Actions@{Actions}}
+\subsubsection[{\texorpdfstring{move\+Down\+Right(const Position \&current\+Pos)}{moveDownRight(const Position &currentPos)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position} Actions\+::move\+Down\+Right (
+\begin{DoxyParamCaption}
+\item[{const {\bf Position} \&}]{current\+Pos}
+\end{DoxyParamCaption}
+)}\hypertarget{classActions_a01769dc63522cc613e8050c2266b0dbf}{}\label{classActions_a01769dc63522cc613e8050c2266b0dbf}
+
+
+Gives the position which is to the down-\/left of the current position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{structPosition}{Position}} & struct which has x,y value, coordinates of a given location \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{structPosition}{Position} struct which has x,y value, coordinates of new position. 
+\end{DoxyReturn}
+\index{Actions@{Actions}!move\+Left@{move\+Left}}
+\index{move\+Left@{move\+Left}!Actions@{Actions}}
+\subsubsection[{\texorpdfstring{move\+Left(const Position \&current\+Pos)}{moveLeft(const Position &currentPos)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position} Actions\+::move\+Left (
+\begin{DoxyParamCaption}
+\item[{const {\bf Position} \&}]{current\+Pos}
+\end{DoxyParamCaption}
+)}\hypertarget{classActions_adb21d8d86e5c11a29a0d8755253a739e}{}\label{classActions_adb21d8d86e5c11a29a0d8755253a739e}
+
+
+Gives the position which is to the left of the current position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{structPosition}{Position}} & struct which has x,y value, coordinates of a given location \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{structPosition}{Position} struct which has x,y value, coordinates of new position. 
+\end{DoxyReturn}
+\index{Actions@{Actions}!move\+Right@{move\+Right}}
+\index{move\+Right@{move\+Right}!Actions@{Actions}}
+\subsubsection[{\texorpdfstring{move\+Right(const Position \&current\+Pos)}{moveRight(const Position &currentPos)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position} Actions\+::move\+Right (
+\begin{DoxyParamCaption}
+\item[{const {\bf Position} \&}]{current\+Pos}
+\end{DoxyParamCaption}
+)}\hypertarget{classActions_a324ac90167fc69643c7dbc2efc779387}{}\label{classActions_a324ac90167fc69643c7dbc2efc779387}
+
+
+Gives the position which is to the right of the current position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{structPosition}{Position}} & struct which has x,y value, coordinates of a given location \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{structPosition}{Position} struct which has x,y value, coordinates of new position. 
+\end{DoxyReturn}
+\index{Actions@{Actions}!move\+Up@{move\+Up}}
+\index{move\+Up@{move\+Up}!Actions@{Actions}}
+\subsubsection[{\texorpdfstring{move\+Up(const Position \&current\+Pos)}{moveUp(const Position &currentPos)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position} Actions\+::move\+Up (
+\begin{DoxyParamCaption}
+\item[{const {\bf Position} \&}]{current\+Pos}
+\end{DoxyParamCaption}
+)}\hypertarget{classActions_aa89a2ec6e16b2ccbebdb3a21be930fa6}{}\label{classActions_aa89a2ec6e16b2ccbebdb3a21be930fa6}
+
+
+Gives the position which is above the current position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{structPosition}{Position}} & struct which has x,y value, coordinates of a given location \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{structPosition}{Position} struct which has x,y value, coordinates of new position. 
+\end{DoxyReturn}
+\index{Actions@{Actions}!move\+Up\+Left@{move\+Up\+Left}}
+\index{move\+Up\+Left@{move\+Up\+Left}!Actions@{Actions}}
+\subsubsection[{\texorpdfstring{move\+Up\+Left(const Position \&current\+Pos)}{moveUpLeft(const Position &currentPos)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position} Actions\+::move\+Up\+Left (
+\begin{DoxyParamCaption}
+\item[{const {\bf Position} \&}]{current\+Pos}
+\end{DoxyParamCaption}
+)}\hypertarget{classActions_a86b92a73287773ba08356fbb999fcc61}{}\label{classActions_a86b92a73287773ba08356fbb999fcc61}
+
+
+Gives the position which is to the top-\/left of the current position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{structPosition}{Position}} & struct which has x,y value, coordinates of a given location \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{structPosition}{Position} struct which has x,y value, coordinates of new position. 
+\end{DoxyReturn}
+\index{Actions@{Actions}!move\+Up\+Right@{move\+Up\+Right}}
+\index{move\+Up\+Right@{move\+Up\+Right}!Actions@{Actions}}
+\subsubsection[{\texorpdfstring{move\+Up\+Right(const Position \&current\+Pos)}{moveUpRight(const Position &currentPos)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position} Actions\+::move\+Up\+Right (
+\begin{DoxyParamCaption}
+\item[{const {\bf Position} \&}]{current\+Pos}
+\end{DoxyParamCaption}
+)}\hypertarget{classActions_a5d57168e20c11b1b07c7f1cbc0419284}{}\label{classActions_a5d57168e20c11b1b07c7f1cbc0419284}
+
+
+Gives the position which is to the top-\/right of the current position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{structPosition}{Position}} & struct which has x,y value, coordinates of a given location \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{structPosition}{Position} struct which has x,y value, coordinates of new position. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Actions.\+h\item 
+app/Actions.\+cpp\end{DoxyCompactItemize}

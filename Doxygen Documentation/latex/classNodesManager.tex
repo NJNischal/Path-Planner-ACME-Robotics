@@ -1,0 +1,248 @@
+\hypertarget{classNodesManager}{}\section{Nodes\+Manager Class Reference}
+\label{classNodesManager}\index{Nodes\+Manager@{Nodes\+Manager}}
+
+
+\hyperlink{classNodesManager}{Nodes\+Manager} class is used to manage and update all the matrices that is required for implementation of A star algorithm.  
+
+
+
+
+{\ttfamily \#include $<$Nodes\+Manager.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classNodesManager_af14624200c5dba19deb48628fdb38338}{update\+Visited} (const \hyperlink{structPosition}{Position} \&pos)
+\begin{DoxyCompactList}\small\item\em Takes the current node as index for the Visited matrix and updates the status at that index. Status is 1 if visited, else 0. \end{DoxyCompactList}\item 
+void \hyperlink{classNodesManager_a7e33a29ae5bb0fdbf061cf71cad10161}{update\+Parent} (const \hyperlink{structPosition}{Position} \&pos, int parent\+Id)
+\begin{DoxyCompactList}\small\item\em Takes the current node as index for the Parent matrix and updates the parent for the node Each parent for current node is associated with unique ID. Ex. For node (1,1), (1,2) as parent. Parent for (1,1) is represented by (x-\/coordinate$\ast$100 + y-\/coordinate) i.\+e. (1,2) -\/ id is 102. \end{DoxyCompactList}\item 
+void \hyperlink{classNodesManager_a97a3abf51b1a265aff8b2b0428e021bd}{update\+Cost} (const \hyperlink{structPosition}{Position} \&pos, double cost)
+\begin{DoxyCompactList}\small\item\em Takes the current node as index for the Cost matrix and updates the cost at that index. \end{DoxyCompactList}\item 
+void \hyperlink{classNodesManager_afe93611a7771f10bc2d6a33a01cdb80c}{update\+Cost\+To\+Come} (const \hyperlink{structPosition}{Position} \&pos, double cost)
+\begin{DoxyCompactList}\small\item\em Takes the current node as index for the Cost\+To\+Come matrix and updates the cost Status is 1 if visited, else 0. \end{DoxyCompactList}\item 
+void \hyperlink{classNodesManager_acb8c01841ac88537ccfaf5cafec0be26}{update\+Cost\+To\+Go} (const \hyperlink{structPosition}{Position} \&pos, double cost)
+\begin{DoxyCompactList}\small\item\em Takes the current node as index for the Cost\+To\+Go matrix and updates the status Status is 1 if visited, else 0. \end{DoxyCompactList}\item 
+int \hyperlink{classNodesManager_a27495b9f67db0f9955945269657b3191}{get\+Parent} (const \hyperlink{structPosition}{Position} \&pos)
+\begin{DoxyCompactList}\small\item\em Returns the parent for the current node taking the current node as index in the Parent matrix. \end{DoxyCompactList}\item 
+int \hyperlink{classNodesManager_a37e0acde250e53d0be293d0cdea45bee}{get\+Visited\+Status} (const \hyperlink{structPosition}{Position} \&pos)
+\begin{DoxyCompactList}\small\item\em Takes the current node as index for the Visited matrix and updates the status Status is 1 if visited, else 0. \end{DoxyCompactList}\item 
+double \hyperlink{classNodesManager_a9388387bf31344892829af09ccaf85aa}{get\+Cost} (const \hyperlink{structPosition}{Position} \&pos)
+\begin{DoxyCompactList}\small\item\em Takes the current node as index for the Cost matrix and returns the cost associated. \end{DoxyCompactList}\item 
+double \hyperlink{classNodesManager_a923055427dd01d11b00ea6b41bca15c0}{get\+Cost\+To\+Come} (const \hyperlink{structPosition}{Position} \&pos)
+\begin{DoxyCompactList}\small\item\em Takes the current node as index for the Cost\+To\+Come matrix and returns the cost associated. \end{DoxyCompactList}\item 
+double \hyperlink{classNodesManager_a55868373af6f6507768094089948c35f}{get\+Cost\+To\+Go} (const \hyperlink{structPosition}{Position} \&pos)
+\begin{DoxyCompactList}\small\item\em Takes the current node as index for the Cost\+To\+Go matrix and returns the cost associated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classNodesManager}{Nodes\+Manager} class is used to manage and update all the matrices that is required for implementation of A star algorithm. 
+
+\subsection{Member Function Documentation}
+\index{Nodes\+Manager@{Nodes\+Manager}!get\+Cost@{get\+Cost}}
+\index{get\+Cost@{get\+Cost}!Nodes\+Manager@{Nodes\+Manager}}
+\subsubsection[{\texorpdfstring{get\+Cost(const Position \&pos)}{getCost(const Position &pos)}}]{\setlength{\rightskip}{0pt plus 5cm}double Nodes\+Manager\+::get\+Cost (
+\begin{DoxyParamCaption}
+\item[{const {\bf Position} \&}]{pos}
+\end{DoxyParamCaption}
+)}\hypertarget{classNodesManager_a9388387bf31344892829af09ccaf85aa}{}\label{classNodesManager_a9388387bf31344892829af09ccaf85aa}
+
+
+Takes the current node as index for the Cost matrix and returns the cost associated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{structPosition}{Position}} & struct which has x,y value, coordinates of a given location. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double cost, this is the total cost for a particular node 
+\end{DoxyReturn}
+\index{Nodes\+Manager@{Nodes\+Manager}!get\+Cost\+To\+Come@{get\+Cost\+To\+Come}}
+\index{get\+Cost\+To\+Come@{get\+Cost\+To\+Come}!Nodes\+Manager@{Nodes\+Manager}}
+\subsubsection[{\texorpdfstring{get\+Cost\+To\+Come(const Position \&pos)}{getCostToCome(const Position &pos)}}]{\setlength{\rightskip}{0pt plus 5cm}double Nodes\+Manager\+::get\+Cost\+To\+Come (
+\begin{DoxyParamCaption}
+\item[{const {\bf Position} \&}]{pos}
+\end{DoxyParamCaption}
+)}\hypertarget{classNodesManager_a923055427dd01d11b00ea6b41bca15c0}{}\label{classNodesManager_a923055427dd01d11b00ea6b41bca15c0}
+
+
+Takes the current node as index for the Cost\+To\+Come matrix and returns the cost associated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{structPosition}{Position}} & struct which has x,y value, coordinates of a given location. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double cost, this is the cost to come associated with the current node. 
+\end{DoxyReturn}
+\index{Nodes\+Manager@{Nodes\+Manager}!get\+Cost\+To\+Go@{get\+Cost\+To\+Go}}
+\index{get\+Cost\+To\+Go@{get\+Cost\+To\+Go}!Nodes\+Manager@{Nodes\+Manager}}
+\subsubsection[{\texorpdfstring{get\+Cost\+To\+Go(const Position \&pos)}{getCostToGo(const Position &pos)}}]{\setlength{\rightskip}{0pt plus 5cm}double Nodes\+Manager\+::get\+Cost\+To\+Go (
+\begin{DoxyParamCaption}
+\item[{const {\bf Position} \&}]{pos}
+\end{DoxyParamCaption}
+)}\hypertarget{classNodesManager_a55868373af6f6507768094089948c35f}{}\label{classNodesManager_a55868373af6f6507768094089948c35f}
+
+
+Takes the current node as index for the Cost\+To\+Go matrix and returns the cost associated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{structPosition}{Position}} & struct which has x,y value, coordinates of a given location. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double cost, this is the cost to come associated with the current node. 
+\end{DoxyReturn}
+\index{Nodes\+Manager@{Nodes\+Manager}!get\+Parent@{get\+Parent}}
+\index{get\+Parent@{get\+Parent}!Nodes\+Manager@{Nodes\+Manager}}
+\subsubsection[{\texorpdfstring{get\+Parent(const Position \&pos)}{getParent(const Position &pos)}}]{\setlength{\rightskip}{0pt plus 5cm}int Nodes\+Manager\+::get\+Parent (
+\begin{DoxyParamCaption}
+\item[{const {\bf Position} \&}]{pos}
+\end{DoxyParamCaption}
+)}\hypertarget{classNodesManager_a27495b9f67db0f9955945269657b3191}{}\label{classNodesManager_a27495b9f67db0f9955945269657b3191}
+
+
+Returns the parent for the current node taking the current node as index in the Parent matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{structPosition}{Position}} & struct which has x,y value, coordinates of a given location. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int unique parent ID (Parent for (1,1) is represented by (x-\/coordinate$\ast$100 + y-\/coordinate)) 
+\end{DoxyReturn}
+\index{Nodes\+Manager@{Nodes\+Manager}!get\+Visited\+Status@{get\+Visited\+Status}}
+\index{get\+Visited\+Status@{get\+Visited\+Status}!Nodes\+Manager@{Nodes\+Manager}}
+\subsubsection[{\texorpdfstring{get\+Visited\+Status(const Position \&pos)}{getVisitedStatus(const Position &pos)}}]{\setlength{\rightskip}{0pt plus 5cm}int Nodes\+Manager\+::get\+Visited\+Status (
+\begin{DoxyParamCaption}
+\item[{const {\bf Position} \&}]{pos}
+\end{DoxyParamCaption}
+)}\hypertarget{classNodesManager_a37e0acde250e53d0be293d0cdea45bee}{}\label{classNodesManager_a37e0acde250e53d0be293d0cdea45bee}
+
+
+Takes the current node as index for the Visited matrix and updates the status Status is 1 if visited, else 0. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{structPosition}{Position}} & struct which has x,y value, coordinates of a given location. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int, this is the visited status, 1 is visited, 0 is unvisited 
+\end{DoxyReturn}
+\index{Nodes\+Manager@{Nodes\+Manager}!update\+Cost@{update\+Cost}}
+\index{update\+Cost@{update\+Cost}!Nodes\+Manager@{Nodes\+Manager}}
+\subsubsection[{\texorpdfstring{update\+Cost(const Position \&pos, double cost)}{updateCost(const Position &pos, double cost)}}]{\setlength{\rightskip}{0pt plus 5cm}void Nodes\+Manager\+::update\+Cost (
+\begin{DoxyParamCaption}
+\item[{const {\bf Position} \&}]{pos, }
+\item[{double}]{cost}
+\end{DoxyParamCaption}
+)}\hypertarget{classNodesManager_a97a3abf51b1a265aff8b2b0428e021bd}{}\label{classNodesManager_a97a3abf51b1a265aff8b2b0428e021bd}
+
+
+Takes the current node as index for the Cost matrix and updates the cost at that index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{structPosition}{Position}} & struct which has x,y value, coordinates of a given location \\
+\hline
+{\em double} & cost, this is the sum of cost to come and cost to go \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\index{Nodes\+Manager@{Nodes\+Manager}!update\+Cost\+To\+Come@{update\+Cost\+To\+Come}}
+\index{update\+Cost\+To\+Come@{update\+Cost\+To\+Come}!Nodes\+Manager@{Nodes\+Manager}}
+\subsubsection[{\texorpdfstring{update\+Cost\+To\+Come(const Position \&pos, double cost)}{updateCostToCome(const Position &pos, double cost)}}]{\setlength{\rightskip}{0pt plus 5cm}void Nodes\+Manager\+::update\+Cost\+To\+Come (
+\begin{DoxyParamCaption}
+\item[{const {\bf Position} \&}]{pos, }
+\item[{double}]{cost}
+\end{DoxyParamCaption}
+)}\hypertarget{classNodesManager_afe93611a7771f10bc2d6a33a01cdb80c}{}\label{classNodesManager_afe93611a7771f10bc2d6a33a01cdb80c}
+
+
+Takes the current node as index for the Cost\+To\+Come matrix and updates the cost Status is 1 if visited, else 0. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{structPosition}{Position}} & struct which has x,y value, coordinates of a given location. \\
+\hline
+{\em double} & cost, this is the cost from start node to the current node (Eucledian distance) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\index{Nodes\+Manager@{Nodes\+Manager}!update\+Cost\+To\+Go@{update\+Cost\+To\+Go}}
+\index{update\+Cost\+To\+Go@{update\+Cost\+To\+Go}!Nodes\+Manager@{Nodes\+Manager}}
+\subsubsection[{\texorpdfstring{update\+Cost\+To\+Go(const Position \&pos, double cost)}{updateCostToGo(const Position &pos, double cost)}}]{\setlength{\rightskip}{0pt plus 5cm}void Nodes\+Manager\+::update\+Cost\+To\+Go (
+\begin{DoxyParamCaption}
+\item[{const {\bf Position} \&}]{pos, }
+\item[{double}]{cost}
+\end{DoxyParamCaption}
+)}\hypertarget{classNodesManager_acb8c01841ac88537ccfaf5cafec0be26}{}\label{classNodesManager_acb8c01841ac88537ccfaf5cafec0be26}
+
+
+Takes the current node as index for the Cost\+To\+Go matrix and updates the status Status is 1 if visited, else 0. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{structPosition}{Position}} & struct which has x,y value, coordinates of a given location. \\
+\hline
+{\em double} & cost, this is the cost from the current node to the goal position (Eucledian distance) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\index{Nodes\+Manager@{Nodes\+Manager}!update\+Parent@{update\+Parent}}
+\index{update\+Parent@{update\+Parent}!Nodes\+Manager@{Nodes\+Manager}}
+\subsubsection[{\texorpdfstring{update\+Parent(const Position \&pos, int parent\+Id)}{updateParent(const Position &pos, int parentId)}}]{\setlength{\rightskip}{0pt plus 5cm}void Nodes\+Manager\+::update\+Parent (
+\begin{DoxyParamCaption}
+\item[{const {\bf Position} \&}]{pos, }
+\item[{int}]{parent\+Id}
+\end{DoxyParamCaption}
+)}\hypertarget{classNodesManager_a7e33a29ae5bb0fdbf061cf71cad10161}{}\label{classNodesManager_a7e33a29ae5bb0fdbf061cf71cad10161}
+
+
+Takes the current node as index for the Parent matrix and updates the parent for the node Each parent for current node is associated with unique ID. Ex. For node (1,1), (1,2) as parent. Parent for (1,1) is represented by (x-\/coordinate$\ast$100 + y-\/coordinate) i.\+e. (1,2) -\/ id is 102. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{structPosition}{Position}} & struct which has x,y value, coordinates of a given location. \\
+\hline
+{\em int} & parent\+Id which represents unique id for the parent this id is stored in the parent\+Matrix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\index{Nodes\+Manager@{Nodes\+Manager}!update\+Visited@{update\+Visited}}
+\index{update\+Visited@{update\+Visited}!Nodes\+Manager@{Nodes\+Manager}}
+\subsubsection[{\texorpdfstring{update\+Visited(const Position \&pos)}{updateVisited(const Position &pos)}}]{\setlength{\rightskip}{0pt plus 5cm}void Nodes\+Manager\+::update\+Visited (
+\begin{DoxyParamCaption}
+\item[{const {\bf Position} \&}]{pos}
+\end{DoxyParamCaption}
+)}\hypertarget{classNodesManager_af14624200c5dba19deb48628fdb38338}{}\label{classNodesManager_af14624200c5dba19deb48628fdb38338}
+
+
+Takes the current node as index for the Visited matrix and updates the status at that index. Status is 1 if visited, else 0. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{structPosition}{Position}} & struct which has x,y value, coordinates of a given location. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Nodes\+Manager.\+h\item 
+app/Nodes\+Manager.\+cpp\end{DoxyCompactItemize}

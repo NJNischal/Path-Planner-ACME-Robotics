@@ -1,0 +1,127 @@
+\hypertarget{classMap}{}\section{Map Class Reference}
+\label{classMap}\index{Map@{Map}}
+
+
+\hyperlink{classMap}{Map} class is used to generate the map with obstacles for the A$\ast$ Algorithm and check validity of given locations.  
+
+
+
+
+{\ttfamily \#include $<$Map.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classMap_af39ac88e2c0f961c60e95b3f7dd00602}{obstacle\+Check} (const \hyperlink{structPosition}{Position} \&new\+Pos)
+\begin{DoxyCompactList}\small\item\em Checks presence of obstacle at the given location where obstacle is represented by \textquotesingle{}1\textquotesingle{} and workspace is represented by \textquotesingle{}0\textquotesingle{} in the map. \end{DoxyCompactList}\item 
+bool \hyperlink{classMap_a4d4d1d84c2888a7233cf9174b45c0a11}{validity\+Check} (const \hyperlink{structPosition}{Position} \&new\+Pos)
+\begin{DoxyCompactList}\small\item\em Checks validity of the given location i.\+e. if the point lies within the bounds of the map. \end{DoxyCompactList}\item 
+void \hyperlink{classMap_a6882934f9d1877bca051a212ee3f754c}{plot\+Map} ()
+\begin{DoxyCompactList}\small\item\em Displays complete map with obstacles represented by 1,0 for valid points. \end{DoxyCompactList}\item 
+void \hyperlink{classMap_ab01b5945ae722908864a3208939928d1}{create\+Map} ()
+\begin{DoxyCompactList}\small\item\em Creates obstacles on the map. \end{DoxyCompactList}\item 
+void \hyperlink{classMap_ade005914937328a33141f3aa0e121bec}{set\+Path} (std\+::vector$<$ Eigen\+::\+Vector2d $>$ path)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classMap}{Map} class is used to generate the map with obstacles for the A$\ast$ Algorithm and check validity of given locations. 
+
+\subsection{Member Function Documentation}
+\index{Map@{Map}!create\+Map@{create\+Map}}
+\index{create\+Map@{create\+Map}!Map@{Map}}
+\subsubsection[{\texorpdfstring{create\+Map()}{createMap()}}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+::create\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classMap_ab01b5945ae722908864a3208939928d1}{}\label{classMap_ab01b5945ae722908864a3208939928d1}
+
+
+Creates obstacles on the map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\index{Map@{Map}!obstacle\+Check@{obstacle\+Check}}
+\index{obstacle\+Check@{obstacle\+Check}!Map@{Map}}
+\subsubsection[{\texorpdfstring{obstacle\+Check(const Position \&new\+Pos)}{obstacleCheck(const Position &newPos)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Map\+::obstacle\+Check (
+\begin{DoxyParamCaption}
+\item[{const {\bf Position} \&}]{new\+Pos}
+\end{DoxyParamCaption}
+)}\hypertarget{classMap_af39ac88e2c0f961c60e95b3f7dd00602}{}\label{classMap_af39ac88e2c0f961c60e95b3f7dd00602}
+
+
+Checks presence of obstacle at the given location where obstacle is represented by \textquotesingle{}1\textquotesingle{} and workspace is represented by \textquotesingle{}0\textquotesingle{} in the map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{structPosition}{Position}} & struct which has x,y value, coordinates of a given location. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Boolean returns true if there is obstacle, false otherwise. 
+\end{DoxyReturn}
+\index{Map@{Map}!plot\+Map@{plot\+Map}}
+\index{plot\+Map@{plot\+Map}!Map@{Map}}
+\subsubsection[{\texorpdfstring{plot\+Map()}{plotMap()}}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+::plot\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classMap_a6882934f9d1877bca051a212ee3f754c}{}\label{classMap_a6882934f9d1877bca051a212ee3f754c}
+
+
+Displays complete map with obstacles represented by 1,0 for valid points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\index{Map@{Map}!set\+Path@{set\+Path}}
+\index{set\+Path@{set\+Path}!Map@{Map}}
+\subsubsection[{\texorpdfstring{set\+Path(std\+::vector$<$ Eigen\+::\+Vector2d $>$ path)}{setPath(std::vector< Eigen::Vector2d > path)}}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+::set\+Path (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ Eigen\+::\+Vector2d $>$}]{path}
+\end{DoxyParamCaption}
+)}\hypertarget{classMap_ade005914937328a33141f3aa0e121bec}{}\label{classMap_ade005914937328a33141f3aa0e121bec}
+brief Sets the path traced by the robot by digit 5 in the matrix. 
+\begin{DoxyParams}{Parameters}
+{\em path} & is a vector containing the points in the form of eigen vector traced by the robot. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\index{Map@{Map}!validity\+Check@{validity\+Check}}
+\index{validity\+Check@{validity\+Check}!Map@{Map}}
+\subsubsection[{\texorpdfstring{validity\+Check(const Position \&new\+Pos)}{validityCheck(const Position &newPos)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Map\+::validity\+Check (
+\begin{DoxyParamCaption}
+\item[{const {\bf Position} \&}]{new\+Pos}
+\end{DoxyParamCaption}
+)}\hypertarget{classMap_a4d4d1d84c2888a7233cf9174b45c0a11}{}\label{classMap_a4d4d1d84c2888a7233cf9174b45c0a11}
+
+
+Checks validity of the given location i.\+e. if the point lies within the bounds of the map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{structPosition}{Position}} & struct which has x,y value, coordinates of a given location. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Boolean returns true if the location is valid, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Map.\+h\item 
+app/Map.\+cpp\end{DoxyCompactItemize}

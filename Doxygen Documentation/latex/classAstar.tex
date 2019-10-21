@@ -1,0 +1,210 @@
+\hypertarget{classAstar}{}\section{Astar Class Reference}
+\label{classAstar}\index{Astar@{Astar}}
+
+
+\hyperlink{classAstar}{Astar} class is used to implement the A$\ast$ algorithm. Euclidean heuristic is used for this algorithm. A star gives the shortest path while avoiding obstacles.  
+
+
+
+
+{\ttfamily \#include $<$Astar.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classAstar_a9f5d925a6e411e851234ab4ef311e7f7}{Astar} (\hyperlink{classMap}{Map} \&map)
+\item 
+std\+::vector$<$ Eigen\+::\+Vector2d $>$ \hyperlink{classAstar_a4addd7a1866da125d6bb035e52f08627}{a\+Star\+Algorithm} ()
+\begin{DoxyCompactList}\small\item\em In this method, the shortest path will be computed using the A$\ast$ algorithm. \end{DoxyCompactList}\item 
+void \hyperlink{classAstar_a71dab0041f5937321717a503d3aa1827}{path\+Backtracking} ()
+\begin{DoxyCompactList}\small\item\em shows the final path which was computed by the A$\ast$ algorithm (Backtracking) \end{DoxyCompactList}\item 
+void \hyperlink{classAstar_a47ad9c479ad2a824d5902bd76d8fd88a}{check\+And\+Update} (const \hyperlink{structPosition}{Position} \&current\+Position, const \hyperlink{structPosition}{Position} \&new\+Position, double d)
+\item 
+double \hyperlink{classAstar_a489c224e6100635858f738a64d408e0e}{compute\+Cost\+To\+Go} (const \hyperlink{structPosition}{Position} \&pos)
+\begin{DoxyCompactList}\small\item\em Calculates the cost to go for the current position and goal position (Euclidean Distance between the two points) \end{DoxyCompactList}\item 
+\hyperlink{structPosition}{Position} \hyperlink{classAstar_a4acb8dce728cdd0b296c7069e96143e3}{get\+Start\+Position} ()
+\begin{DoxyCompactList}\small\item\em Is used to retrieve the start position. \end{DoxyCompactList}\item 
+\hyperlink{structPosition}{Position} \hyperlink{classAstar_ad833c2038e84c544e3bdf22657663346}{get\+Goal\+Position} ()
+\begin{DoxyCompactList}\small\item\em Is used to retrieve the goal position. \end{DoxyCompactList}\item 
+void \hyperlink{classAstar_ab2f62826b10ad7fe479948bca50b27b7}{set\+Start\+Position} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Is used to set the start position. \end{DoxyCompactList}\item 
+void \hyperlink{classAstar_a23c5c0f315830d742382562319b250c6}{set\+Goal\+Position} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Is used to set the goal position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classAstar}{Astar} class is used to implement the A$\ast$ algorithm. Euclidean heuristic is used for this algorithm. A star gives the shortest path while avoiding obstacles. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Astar@{Astar}!Astar@{Astar}}
+\index{Astar@{Astar}!Astar@{Astar}}
+\subsubsection[{\texorpdfstring{Astar(\+Map \&map)}{Astar(Map &map)}}]{\setlength{\rightskip}{0pt plus 5cm}Astar\+::\+Astar (
+\begin{DoxyParamCaption}
+\item[{{\bf Map} \&}]{map}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classAstar_a9f5d925a6e411e851234ab4ef311e7f7}{}\label{classAstar_a9f5d925a6e411e851234ab4ef311e7f7}
+one argument constructor that takes object of class map by reference. 
+
+\subsection{Member Function Documentation}
+\index{Astar@{Astar}!a\+Star\+Algorithm@{a\+Star\+Algorithm}}
+\index{a\+Star\+Algorithm@{a\+Star\+Algorithm}!Astar@{Astar}}
+\subsubsection[{\texorpdfstring{a\+Star\+Algorithm()}{aStarAlgorithm()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ Eigen\+::\+Vector2d $>$ Astar\+::a\+Star\+Algorithm (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAstar_a4addd7a1866da125d6bb035e52f08627}{}\label{classAstar_a4addd7a1866da125d6bb035e52f08627}
+
+
+In this method, the shortest path will be computed using the A$\ast$ algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Eigen\+::\+Vector2d$>$ returns path obtained from astar algorithm. 
+\end{DoxyReturn}
+\index{Astar@{Astar}!check\+And\+Update@{check\+And\+Update}}
+\index{check\+And\+Update@{check\+And\+Update}!Astar@{Astar}}
+\subsubsection[{\texorpdfstring{check\+And\+Update(const Position \&current\+Position, const Position \&new\+Position, double d)}{checkAndUpdate(const Position &currentPosition, const Position &newPosition, double d)}}]{\setlength{\rightskip}{0pt plus 5cm}void Astar\+::check\+And\+Update (
+\begin{DoxyParamCaption}
+\item[{const {\bf Position} \&}]{current\+Position, }
+\item[{const {\bf Position} \&}]{new\+Position, }
+\item[{double}]{d}
+\end{DoxyParamCaption}
+)}\hypertarget{classAstar_a47ad9c479ad2a824d5902bd76d8fd88a}{}\label{classAstar_a47ad9c479ad2a824d5902bd76d8fd88a}
+
+\begin{DoxyParams}{Parameters}
+{\em struct} & position that represents current position of the robot on the map. \\
+\hline
+{\em struct} & new position that represents next position of the robot on the map \\
+\hline
+{\em double} & d which specifies cost specific to an action 1 for up down right left. sqrt(2) for remaining four actions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\index{Astar@{Astar}!compute\+Cost\+To\+Go@{compute\+Cost\+To\+Go}}
+\index{compute\+Cost\+To\+Go@{compute\+Cost\+To\+Go}!Astar@{Astar}}
+\subsubsection[{\texorpdfstring{compute\+Cost\+To\+Go(const Position \&pos)}{computeCostToGo(const Position &pos)}}]{\setlength{\rightskip}{0pt plus 5cm}double Astar\+::compute\+Cost\+To\+Go (
+\begin{DoxyParamCaption}
+\item[{const {\bf Position} \&}]{pos}
+\end{DoxyParamCaption}
+)}\hypertarget{classAstar_a489c224e6100635858f738a64d408e0e}{}\label{classAstar_a489c224e6100635858f738a64d408e0e}
+
+
+Calculates the cost to go for the current position and goal position (Euclidean Distance between the two points) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current} & position, stuct \hyperlink{structPosition}{Position} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Double Cost to go 
+\end{DoxyReturn}
+\index{Astar@{Astar}!get\+Goal\+Position@{get\+Goal\+Position}}
+\index{get\+Goal\+Position@{get\+Goal\+Position}!Astar@{Astar}}
+\subsubsection[{\texorpdfstring{get\+Goal\+Position()}{getGoalPosition()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position} Astar\+::get\+Goal\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAstar_ad833c2038e84c544e3bdf22657663346}{}\label{classAstar_ad833c2038e84c544e3bdf22657663346}
+
+
+Is used to retrieve the goal position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Struct position 
+\end{DoxyReturn}
+\index{Astar@{Astar}!get\+Start\+Position@{get\+Start\+Position}}
+\index{get\+Start\+Position@{get\+Start\+Position}!Astar@{Astar}}
+\subsubsection[{\texorpdfstring{get\+Start\+Position()}{getStartPosition()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position} Astar\+::get\+Start\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAstar_a4acb8dce728cdd0b296c7069e96143e3}{}\label{classAstar_a4acb8dce728cdd0b296c7069e96143e3}
+
+
+Is used to retrieve the start position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Struct position 
+\end{DoxyReturn}
+\index{Astar@{Astar}!path\+Backtracking@{path\+Backtracking}}
+\index{path\+Backtracking@{path\+Backtracking}!Astar@{Astar}}
+\subsubsection[{\texorpdfstring{path\+Backtracking()}{pathBacktracking()}}]{\setlength{\rightskip}{0pt plus 5cm}void Astar\+::path\+Backtracking (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAstar_a71dab0041f5937321717a503d3aa1827}{}\label{classAstar_a71dab0041f5937321717a503d3aa1827}
+
+
+shows the final path which was computed by the A$\ast$ algorithm (Backtracking) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\index{Astar@{Astar}!set\+Goal\+Position@{set\+Goal\+Position}}
+\index{set\+Goal\+Position@{set\+Goal\+Position}!Astar@{Astar}}
+\subsubsection[{\texorpdfstring{set\+Goal\+Position(int x, int y)}{setGoalPosition(int x, int y)}}]{\setlength{\rightskip}{0pt plus 5cm}void Astar\+::set\+Goal\+Position (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{classAstar_a23c5c0f315830d742382562319b250c6}{}\label{classAstar_a23c5c0f315830d742382562319b250c6}
+
+
+Is used to set the goal position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & x and y coordinates for goal position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\index{Astar@{Astar}!set\+Start\+Position@{set\+Start\+Position}}
+\index{set\+Start\+Position@{set\+Start\+Position}!Astar@{Astar}}
+\subsubsection[{\texorpdfstring{set\+Start\+Position(int x, int y)}{setStartPosition(int x, int y)}}]{\setlength{\rightskip}{0pt plus 5cm}void Astar\+::set\+Start\+Position (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{classAstar_ab2f62826b10ad7fe479948bca50b27b7}{}\label{classAstar_ab2f62826b10ad7fe479948bca50b27b7}
+
+
+Is used to set the start position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & x and y coordinates for start position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Astar.\+h\item 
+app/Astar.\+cpp\end{DoxyCompactItemize}
