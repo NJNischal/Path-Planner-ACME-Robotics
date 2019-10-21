@@ -100,7 +100,9 @@ TEST(nodesTest, testNodesManagerMethods) {
  * @brief This is a test for methods in Astar class
  */
 TEST(astarTest, testAstarMethods) {
-  Astar astar;
+  Map map;
+  map.createMap();
+  Astar astar(map);
 
   astar.setStartPosition(1, 1);
   EXPECT_EQ(1, astar.getStartPosition().x);

@@ -34,7 +34,10 @@
  */
 class Astar {
  public:
-  Astar();
+  /**
+   * one argument constructor that takes object of class map by reference.
+   */
+  explicit Astar(Map& map);
   ~Astar();
 
   /**
@@ -106,7 +109,7 @@ class Astar {
   std::vector<Eigen::Vector2d> path;
   NodesManager manageNodes;
   Actions action;
-  Map workspace;
+  Map &workspace;
   std::multimap<double, Position> priority;
 };
 

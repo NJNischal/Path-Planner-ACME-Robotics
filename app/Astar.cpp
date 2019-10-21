@@ -18,7 +18,8 @@
 
 #include "Astar.h"
 
-Astar::Astar() {
+Astar::Astar(Map& map)
+    : workspace(map) {
 }
 
 Astar::~Astar() {
@@ -69,6 +70,8 @@ std::vector<Eigen::Vector2d> Astar::aStarAlgorithm() {
   for (auto iter = path.begin(); iter != path.end(); ++iter) {
     std::cout << *iter << std::endl;
   }
+
+  workspace.setPath(path);
   return path;
 }
 
@@ -95,8 +98,11 @@ void Astar::pathBacktracking() {
 void Astar::checkAndUpdate(const Position& currentPosition,
                            const Position& newPosition, double d) {
   // checks
-  bool check1 = workspace.obstacleCheck(newPosition);
   bool check2 = workspace.validityCheck(newPosition);
+  bool check1 = true;
+  if (check2) {
+    check1 = workspace.obstacleCheck(newPosition);
+  }
 
   if (!check1 && check2) {
     bool status = manageNodes.getVisitedStatus(newPosition);

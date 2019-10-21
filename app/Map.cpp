@@ -29,7 +29,7 @@ void Map::createMap() {
   map.block(2, 2, 4, 4).setOnes();
   map.block(2, 12, 4, 4).setOnes();
   map.block(14, 5, 4, 8).setOnes();
-  std::cout << map;
+  std::cout << map << std::endl;
 }
 
 bool Map::obstacleCheck(const Position& newPos) {
