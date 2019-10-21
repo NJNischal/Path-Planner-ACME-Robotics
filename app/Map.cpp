@@ -48,10 +48,15 @@ bool Map::validityCheck(const Position& newPos) {
   return 0;
 }
 
-void Map::plotMap() {
-  std::cout << "Complete map will be shown.";
+void Map::setPath(std::vector<Eigen::Vector2d> path) {
+  // sets number 5 in the map matrix to path obtained.
+  for (auto iter = path.begin(); iter != path.end(); ++iter) {
+    auto vector = *iter;
+    map(vector[0], vector[1]) = 5;
+  }
 }
 
-void Map::setPath(std::vector<Eigen::Vector2d> path) {
-  (void) path;
+void Map::plotMap() {
+  std::cout << "Map of the workspace." << std::endl;
+  std::cout << map << std::endl;
 }
