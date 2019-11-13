@@ -10,7 +10,7 @@ This is the project implements the path planner Module for Acme Robotics. In thi
 
 ## Purpose
 
-The main motive of the project is to solve the objective of welding operation on given plate by join 2 plates .This task is most important in development of whole product.Human involvement cannot guarantee safe and efficient outcome.So robot is needed.To accomplish this task robot need to move in the plane by avoiding obstacles within shortest path and shortest time.This can be done by using Astar algorithm and giving the solution obtained to inverse kinematics solver to get joint angles.In this task,6 degree of freedom robot manipulator is used.Hence we get 6 joint angles for every point in the path.When these points are given to robot as input at intervals till the alst point,the end effector follows the path from start to end point.
+The main motive of this project is to solve the objective of welding operation on given plate by join 2 plates .This task is most important in development of whole product.Human involvement cannot guarantee safe and efficient outcome.So robot is needed.To accomplish this task robot need to move in the plane by avoiding obstacles within shortest path and shortest time.This can be done by using Astar algorithm and giving the solution obtained to inverse kinematics solver to get joint angles.In this task,6 degree of freedom robot manipulator is used.Hence we get 6 joint angles for every point in the path.When these points are given to robot as input at intervals till the alst point,the end effector follows the path from start to end point.
 
 ## Astar Algorithm
 
